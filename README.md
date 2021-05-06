@@ -4,6 +4,26 @@
 
 [Hexo](https://github.com/hexojs/hexo)  
 
+### Hexo Basic Command
+
+#### Create a new post
+
+``` bash
+hexo new "My New Post"
+```
+
+#### Generate static files
+
+``` bash
+hexo generate
+```
+
+#### Run server
+
+``` bash
+hexo server
+```
+
 ### Hexo Theme
 
 [NexT](https://github.com/next-theme/hexo-theme-next)
