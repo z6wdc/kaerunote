@@ -1,5 +1,5 @@
 ---
-title: int()
+title: Python Built-in Function int()
 date: 2021-05-07 01:02:43
 tags: ['Python']
 ---

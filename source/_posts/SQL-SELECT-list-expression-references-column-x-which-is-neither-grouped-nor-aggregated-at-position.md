@@ -1,5 +1,5 @@
 ---
-title: SELECT list expression references column x which is neither grouped nor aggregated at [position]
+title: SQL SELECT list expression references column x which is neither grouped nor aggregated at [position]
 date: 2021-05-05 19:05:52
 tags: ['SQL', 'BigQuery']
 ---
