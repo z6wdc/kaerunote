@@ -3,7 +3,7 @@ title: Python List Comprehension
 date: 2021-05-06 20:18:13
 tags: ['Python']
 ---
-在 Python 中有著 List Comprehension 這個更簡潔的 synax
+在 Python 中有 [List Comprehension](https://docs.python.org/3/tutorial/datastructures.html?#list-comprehensions) 這個簡潔的 synax
 
 ## The Syntax
 
