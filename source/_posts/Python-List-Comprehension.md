@@ -1,5 +1,5 @@
 ---
-title: List Comprehension
+title: Python List Comprehension
 date: 2021-05-06 20:18:13
 tags: ['Python']
 ---
