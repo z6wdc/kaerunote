@@ -6,11 +6,11 @@ tags: ['Python']
 
 Python Built-in Function 的 [int()](https://docs.python.org/3/library/functions.html#int)
 
-## example1
+## Example 1
 
 可以把 `str` 轉換成 `int`
 
-```python
+```py
 int('29')
 ```
 
@@ -20,16 +20,16 @@ Output
 29
 ```
 
-## example 2
+## Example 2
 
 可以把 `float` 轉換成 `int`
 轉換的時候，會直接捨去小數點後的部分
 
-```python
+```py
 int(3.14)
 ```
 
-```python
+```py
 int(7.0)
 ```
 

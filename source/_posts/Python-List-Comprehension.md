@@ -7,14 +7,15 @@ tags: ['Python']
 
 ## The Syntax
 
-```python
+```py
 newlist = [expression for item in iterable if condition == True]
 ```
 
-例  
+### Example 1
+
 列出從 1 - 10 的偶數
 
-```python
+```py
 numbers = range(10)
 even = [x for x in numbers if x % 2 == 0]
 
