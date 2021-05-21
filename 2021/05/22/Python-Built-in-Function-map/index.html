@@ -20,28 +20,28 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;z6wdc.github.io&quot;,&quot;root&quot;:&quot;&#x2F;kaerunote&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;kaerunote&#x2F;images&quot;,&quot;scheme&quot;:&quot;Mist&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;hide&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
-<meta name="description" content="Python 有 random 這個 module除了可以產生亂數外，還可以隨機挑選資料   How to importimport random  Functions for integersrandintrandom.randint(0, 100)  randint 會隨機從 0 &lt;&#x3D; n &lt;&#x3D; 100 的數字隨機挑選一個整數 Functions for sequenceschoi">
+<meta name="description" content="我們可以利用 Python Built-in Function 的 map() 來對 iterable object 做想要的處理 map()map(function, iterable, ...) function 是你要對 iterable 使用的參數 回傳值為 map object Example 1list(map(int, [&#39;1&#39;, &#39;2&#39;, &#39;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python random module">
-<meta property="og:url" content="https://z6wdc.github.io/kaerunote/2021/05/18/Python-random-module/index.html">
+<meta property="og:title" content="Python Built-in Function map()">
+<meta property="og:url" content="https://z6wdc.github.io/kaerunote/2021/05/22/Python-Built-in-Function-map/index.html">
 <meta property="og:site_name" content="kaerunote">
-<meta property="og:description" content="Python 有 random 這個 module除了可以產生亂數外，還可以隨機挑選資料   How to importimport random  Functions for integersrandintrandom.randint(0, 100)  randint 會隨機從 0 &lt;&#x3D; n &lt;&#x3D; 100 的數字隨機挑選一個整數 Functions for sequenceschoi">
+<meta property="og:description" content="我們可以利用 Python Built-in Function 的 map() 來對 iterable object 做想要的處理 map()map(function, iterable, ...) function 是你要對 iterable 使用的參數 回傳值為 map object Example 1list(map(int, [&#39;1&#39;, &#39;2&#39;, &#39;">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-05-18T22:36:49.000Z">
+<meta property="article:published_time" content="2021-05-22T07:09:40.000Z">
 <meta property="article:modified_time" content="2021-05-21T23:40:51.363Z">
 <meta property="article:author" content="z6wdc">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://z6wdc.github.io/kaerunote/2021/05/18/Python-random-module/">
+<link rel="canonical" href="https://z6wdc.github.io/kaerunote/2021/05/22/Python-Built-in-Function-map/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;z6wdc.github.io&#x2F;kaerunote&#x2F;2021&#x2F;05&#x2F;18&#x2F;Python-random-module&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;18&#x2F;Python-random-module&#x2F;&quot;,&quot;title&quot;:&quot;Python random module&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;z6wdc.github.io&#x2F;kaerunote&#x2F;2021&#x2F;05&#x2F;22&#x2F;Python-Built-in-Function-map&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;22&#x2F;Python-Built-in-Function-map&#x2F;&quot;,&quot;title&quot;:&quot;Python Built-in Function map()&quot;}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>Python random module | kaerunote</title><script src="/kaerunote/js/config.js"></script>
+<title>Python Built-in Function map() | kaerunote</title><script src="/kaerunote/js/config.js"></script>
   
 
 
@@ -116,7 +116,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-import"><span class="nav-number">1.</span> <span class="nav-text">How to import</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Functions-for-integers"><span class="nav-number">2.</span> <span class="nav-text">Functions for integers</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#randint"><span class="nav-number">2.1.</span> <span class="nav-text">randint</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Functions-for-sequences"><span class="nav-number">3.</span> <span class="nav-text">Functions for sequences</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#choices"><span class="nav-number">3.1.</span> <span class="nav-text">choices</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sample"><span class="nav-number">3.2.</span> <span class="nav-text">sample</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#map"><span class="nav-number">1.</span> <span class="nav-text">map()</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-1"><span class="nav-number">1.1.</span> <span class="nav-text">Example 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-2"><span class="nav-number">1.2.</span> <span class="nav-text">Example 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-3"><span class="nav-number">1.3.</span> <span class="nav-text">Example 3</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -175,7 +175,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/05/18/Python-random-module/">
+    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/05/22/Python-Built-in-Function-map/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/kaerunote/images/avatar.gif">
@@ -188,7 +188,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Python random module
+          Python Built-in Function map()
         </h1>
 
         <div class="post-meta-container">
@@ -199,7 +199,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2021-05-18 22:36:49" itemprop="dateCreated datePublished" datetime="2021-05-18T22:36:49+00:00">2021-05-18</time>
+      <time title="Created: 2021-05-22 07:09:40" itemprop="dateCreated datePublished" datetime="2021-05-22T07:09:40+00:00">2021-05-22</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
@@ -219,27 +219,48 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>Python 有 random 這個 module<br>除了可以產生亂數外，還可以隨機挑選資料  </p>
-<h2 id="How-to-import"><a href="#How-to-import" class="headerlink" title="How to import"></a>How to import</h2><pre class="language-py" data-language="py"><code class="language-py">import random</code></pre>
+        <p>我們可以利用</p>
+<p>Python Built-in Function 的 <a target="_blank" rel="noopener" href="https://docs.python.org/3/library/functions.html#map">map()</a></p>
+<p>來對 iterable object 做想要的處理</p>
+<h2 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h2><p><code>map(function, iterable, ...)</code></p>
+<p>function 是你要對 iterable 使用的參數</p>
+<p>回傳值為 map object</p>
+<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h3><pre class="language-py" data-language="py"><code class="language-py">list(map(int, [&#39;1&#39;, &#39;2&#39;, &#39;3&#39;]))</code></pre>
 
-<h2 id="Functions-for-integers"><a href="#Functions-for-integers" class="headerlink" title="Functions for integers"></a>Functions for integers</h2><h3 id="randint"><a href="#randint" class="headerlink" title="randint"></a>randint</h3><pre class="language-py" data-language="py"><code class="language-py">random.randint(0, 100)</code></pre>
+<p>這個例子中</p>
+<p><code>map()</code> 會把 <code>[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;]</code> 這個 list 裡面的字串當作參數</p>
+<p>去使用 <code>int()</code> 這個 function</p>
+<p>因為 <code>map()</code> 回傳值為 map object</p>
+<p>最後對回傳值使用 <code>list()</code> 可以方便檢查結果</p>
+<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h3><pre class="language-py" data-language="py"><code class="language-py">def add(x, y):
+    return x + y
 
-<p>randint 會隨機從 0 &lt;= n &lt;= 100 的數字隨機挑選一個整數</p>
-<h2 id="Functions-for-sequences"><a href="#Functions-for-sequences" class="headerlink" title="Functions for sequences"></a>Functions for sequences</h2><h3 id="choices"><a href="#choices" class="headerlink" title="choices"></a>choices</h3><pre class="language-py" data-language="py"><code class="language-py">numbers &#x3D; [1, 2, 3, 4, 5]
-random.choices(numbers, k&#x3D;3)</code></pre>
+list1 &#x3D; [1, 2, 3]
+list2 &#x3D; [3, 4]
 
-<p><code>choices</code> 會隨機從指定的 list 中重複取出你要的數目</p>
-<p>要注意的是指定數目的時候需要寫出 keyword <code>k</code></p>
-<p>像是例子中 k=3 就會取出三個</p>
-<p>不指定 k 的話，預設值為 1</p>
-<h3 id="sample"><a href="#sample" class="headerlink" title="sample"></a>sample</h3><pre class="language-py" data-language="py"><code class="language-py">numbers &#x3D; [1, 2, 3, 4, 5]
-random.sample(numbers, 3)</code></pre>
+list(map(add, list1, list2))</code></pre>
 
-<p><code>sample</code> 會隨機從指定的 list 中取出你要的數目</p>
-<p>而且數字不重複</p>
-<p>但要取出的數目不能大於 list 的 length</p>
-<p>不然就會發生下面的</p>
-<p><code>ValueError: Sample larger than population or is negative</code></p>
+<p>Output</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span><span class="token number">4</span>, <span class="token number">6</span><span class="token punctuation">]</span></code></pre>
+
+<p><code>map()</code> 也可以使用自己定義的 function</p>
+<p>如果自定義的 function 有兩個參數</p>
+<p>後面就必須帶入相對應數量的 iterable</p>
+<p>這個例子中為兩個 list</p>
+<p>另外當 list 不一樣長的時候</p>
+<p>最短的 list 處理完時就會停止</p>
+<h3 id="Example-3"><a href="#Example-3" class="headerlink" title="Example 3"></a>Example 3</h3><pre class="language-py" data-language="py"><code class="language-py">list(map(int, [&#39;10&#39;]*10, range(2, 11)))</code></pre>
+
+<p>Output</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span><span class="token number">2</span>, <span class="token number">3</span>, <span class="token number">4</span>, <span class="token number">5</span>, <span class="token number">6</span>, <span class="token number">7</span>, <span class="token number">8</span>, <span class="token number">9</span>, <span class="token number">10</span><span class="token punctuation">]</span></code></pre>
+
+<p>這個例子中還是使用 <code>int()</code></p>
+<p>這次對 <code>int()</code> 輸入兩個參數</p>
+<p>第一個為要轉換的數字，使用了字串 10</p>
+<p>第二個是要轉換的進制</p>
+<p>因為是 <code>range(2, 11)</code></p>
+<p>所以結果會印出 10 這個數</p>
+<p>在 2 進位到 10 進位下的數值</p>
 
     </div>
 
@@ -256,14 +277,11 @@ random.sample(numbers, 3)</code></pre>
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/kaerunote/2021/05/07/Python-built-in-function-int/" rel="prev" title="Python Built-in Function int()">
-                  <i class="fa fa-chevron-left"></i> Python Built-in Function int()
+                <a href="/kaerunote/2021/05/18/Python-random-module/" rel="prev" title="Python random module">
+                  <i class="fa fa-chevron-left"></i> Python random module
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/kaerunote/2021/05/22/Python-Built-in-Function-map/" rel="next" title="Python Built-in Function map()">
-                  Python Built-in Function map() <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>

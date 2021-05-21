@@ -123,7 +123,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/kaerunote/archives">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -168,6 +168,118 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/05/22/Python-Built-in-Function-map/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/kaerunote/images/avatar.gif">
+      <meta itemprop="name" content="z6wdc">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kaerunote">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/kaerunote/2021/05/22/Python-Built-in-Function-map/" class="post-title-link" itemprop="url">Python Built-in Function map()</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-05-22 07:09:40" itemprop="dateCreated datePublished" datetime="2021-05-22T07:09:40+00:00">2021-05-22</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-21 23:40:51" itemprop="dateModified" datetime="2021-05-21T23:40:51+00:00">2021-05-21</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>我們可以利用</p>
+<p>Python Built-in Function 的 <a target="_blank" rel="noopener" href="https://docs.python.org/3/library/functions.html#map">map()</a></p>
+<p>來對 iterable object 做想要的處理</p>
+<h2 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h2><p><code>map(function, iterable, ...)</code></p>
+<p>function 是你要對 iterable 使用的參數</p>
+<p>回傳值為 map object</p>
+<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h3><pre class="language-py" data-language="py"><code class="language-py">list(map(int, [&#39;1&#39;, &#39;2&#39;, &#39;3&#39;]))</code></pre>
+
+<p>這個例子中</p>
+<p><code>map()</code> 會把 <code>[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;]</code> 這個 list 裡面的字串當作參數</p>
+<p>去使用 <code>int()</code> 這個 function</p>
+<p>因為 <code>map()</code> 回傳值為 map object</p>
+<p>最後對回傳值使用 <code>list()</code> 可以方便檢查結果</p>
+<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h3><pre class="language-py" data-language="py"><code class="language-py">def add(x, y):
+    return x + y
+
+list1 &#x3D; [1, 2, 3]
+list2 &#x3D; [3, 4]
+
+list(map(add, list1, list2))</code></pre>
+
+<p>Output</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span><span class="token number">4</span>, <span class="token number">6</span><span class="token punctuation">]</span></code></pre>
+
+<p><code>map()</code> 也可以使用自己定義的 function</p>
+<p>如果自定義的 function 有兩個參數</p>
+<p>後面就必須帶入相對應數量的 iterable</p>
+<p>這個例子中為兩個 list</p>
+<p>另外當 list 不一樣長的時候</p>
+<p>最短的 list 處理完時就會停止</p>
+<h3 id="Example-3"><a href="#Example-3" class="headerlink" title="Example 3"></a>Example 3</h3><pre class="language-py" data-language="py"><code class="language-py">list(map(int, [&#39;10&#39;]*10, range(2, 11)))</code></pre>
+
+<p>Output</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span><span class="token number">2</span>, <span class="token number">3</span>, <span class="token number">4</span>, <span class="token number">5</span>, <span class="token number">6</span>, <span class="token number">7</span>, <span class="token number">8</span>, <span class="token number">9</span>, <span class="token number">10</span><span class="token punctuation">]</span></code></pre>
+
+<p>這個例子中還是使用 <code>int()</code></p>
+<p>這次對 <code>int()</code> 輸入兩個參數</p>
+<p>第一個為要轉換的數字，使用了字串 10</p>
+<p>第二個是要轉換的進制</p>
+<p>因為是 <code>range(2, 11)</code></p>
+<p>所以結果會印出 10 這個數</p>
+<p>在 2 進位到 10 進位下的數值</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/05/18/Python-random-module/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -199,7 +311,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-05-21 01:03:36" itemprop="dateModified" datetime="2021-05-21T01:03:36+00:00">2021-05-21</time>
+        <time title="Modified: 2021-05-21 23:40:51" itemprop="dateModified" datetime="2021-05-21T23:40:51+00:00">2021-05-21</time>
       </span>
 
   
@@ -213,20 +325,20 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>Python 有 random 這個 module<br>除了可以產生亂數外，還可以隨機挑選資料  </p>
-<h2 id="How-to-import"><a href="#How-to-import" class="headerlink" title="How to import"></a>How to import</h2><pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> random</code></pre>
+<h2 id="How-to-import"><a href="#How-to-import" class="headerlink" title="How to import"></a>How to import</h2><pre class="language-py" data-language="py"><code class="language-py">import random</code></pre>
 
-<h2 id="Functions-for-integers"><a href="#Functions-for-integers" class="headerlink" title="Functions for integers"></a>Functions for integers</h2><h3 id="randint"><a href="#randint" class="headerlink" title="randint"></a>randint</h3><pre class="language-python" data-language="python"><code class="language-python">random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span></code></pre>
+<h2 id="Functions-for-integers"><a href="#Functions-for-integers" class="headerlink" title="Functions for integers"></a>Functions for integers</h2><h3 id="randint"><a href="#randint" class="headerlink" title="randint"></a>randint</h3><pre class="language-py" data-language="py"><code class="language-py">random.randint(0, 100)</code></pre>
 
 <p>randint 會隨機從 0 &lt;= n &lt;= 100 的數字隨機挑選一個整數</p>
-<h2 id="Functions-for-sequences"><a href="#Functions-for-sequences" class="headerlink" title="Functions for sequences"></a>Functions for sequences</h2><h3 id="choices"><a href="#choices" class="headerlink" title="choices"></a>choices</h3><pre class="language-python" data-language="python"><code class="language-python">numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
-random<span class="token punctuation">.</span>choices<span class="token punctuation">(</span>numbers<span class="token punctuation">,</span> k<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span></code></pre>
+<h2 id="Functions-for-sequences"><a href="#Functions-for-sequences" class="headerlink" title="Functions for sequences"></a>Functions for sequences</h2><h3 id="choices"><a href="#choices" class="headerlink" title="choices"></a>choices</h3><pre class="language-py" data-language="py"><code class="language-py">numbers &#x3D; [1, 2, 3, 4, 5]
+random.choices(numbers, k&#x3D;3)</code></pre>
 
 <p><code>choices</code> 會隨機從指定的 list 中重複取出你要的數目</p>
 <p>要注意的是指定數目的時候需要寫出 keyword <code>k</code></p>
 <p>像是例子中 k=3 就會取出三個</p>
 <p>不指定 k 的話，預設值為 1</p>
-<h3 id="sample"><a href="#sample" class="headerlink" title="sample"></a>sample</h3><pre class="language-python" data-language="python"><code class="language-python">numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
-random<span class="token punctuation">.</span>sample<span class="token punctuation">(</span>numbers<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span></code></pre>
+<h3 id="sample"><a href="#sample" class="headerlink" title="sample"></a>sample</h3><pre class="language-py" data-language="py"><code class="language-py">numbers &#x3D; [1, 2, 3, 4, 5]
+random.sample(numbers, 3)</code></pre>
 
 <p><code>sample</code> 會隨機從指定的 list 中取出你要的數目</p>
 <p>而且數字不重複</p>
@@ -290,7 +402,7 @@ random<span class="token punctuation">.</span>sample<span class="token punctuati
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-05-21 01:03:36" itemprop="dateModified" datetime="2021-05-21T01:03:36+00:00">2021-05-21</time>
+        <time title="Modified: 2021-05-21 23:40:51" itemprop="dateModified" datetime="2021-05-21T23:40:51+00:00">2021-05-21</time>
       </span>
 
   
@@ -304,16 +416,16 @@ random<span class="token punctuation">.</span>sample<span class="token punctuati
     
     <div class="post-body" itemprop="articleBody">
           <p>Python Built-in Function 的 <a target="_blank" rel="noopener" href="https://docs.python.org/3/library/functions.html#int">int()</a></p>
-<p>除了可以把 <code>str</code> 轉換成 <code>int</code></p>
-<pre class="language-python" data-language="python"><code class="language-python"><span class="token builtin">int</span><span class="token punctuation">(</span><span class="token string">'29'</span><span class="token punctuation">)</span></code></pre>
+<h2 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h2><p>可以把 <code>str</code> 轉換成 <code>int</code></p>
+<pre class="language-py" data-language="py"><code class="language-py">int(&#39;29&#39;)</code></pre>
 
 <p>Output</p>
 <pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token number">29</span></code></pre>
 
-<p>也可以把 <code>float</code> 轉換成 <code>int</code><br>轉換的時候，會直接捨去小數點後的部分</p>
-<pre class="language-python" data-language="python"><code class="language-python"><span class="token builtin">int</span><span class="token punctuation">(</span><span class="token number">3.14</span><span class="token punctuation">)</span></code></pre>
+<h2 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h2><p>可以把 <code>float</code> 轉換成 <code>int</code><br>轉換的時候，會直接捨去小數點後的部分</p>
+<pre class="language-py" data-language="py"><code class="language-py">int(3.14)</code></pre>
 
-<pre class="language-python" data-language="python"><code class="language-python"><span class="token builtin">int</span><span class="token punctuation">(</span><span class="token number">7.0</span><span class="token punctuation">)</span></code></pre>
+<pre class="language-py" data-language="py"><code class="language-py">int(7.0)</code></pre>
 
 <p>Output</p>
 <pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token number">3</span></code></pre>
@@ -376,7 +488,7 @@ random<span class="token punctuation">.</span>sample<span class="token punctuati
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-05-21 01:03:36" itemprop="dateModified" datetime="2021-05-21T01:03:36+00:00">2021-05-21</time>
+        <time title="Modified: 2021-05-21 23:40:51" itemprop="dateModified" datetime="2021-05-21T23:40:51+00:00">2021-05-21</time>
       </span>
 
   
@@ -389,14 +501,14 @@ random<span class="token punctuation">.</span>sample<span class="token punctuati
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>在 Python 中有著 List Comprehension 這個更簡潔的 synax</p>
-<h2 id="The-Syntax"><a href="#The-Syntax" class="headerlink" title="The Syntax"></a>The Syntax</h2><pre class="language-python" data-language="python"><code class="language-python">newlist <span class="token operator">=</span> <span class="token punctuation">[</span>expression <span class="token keyword">for</span> item <span class="token keyword">in</span> iterable <span class="token keyword">if</span> condition <span class="token operator">==</span> <span class="token boolean">True</span><span class="token punctuation">]</span></code></pre>
+          <p>在 Python 中有 <a target="_blank" rel="noopener" href="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions">List Comprehension</a> 這個簡潔的 syntax</p>
+<h2 id="The-Syntax"><a href="#The-Syntax" class="headerlink" title="The Syntax"></a>The Syntax</h2><pre class="language-py" data-language="py"><code class="language-py">newlist &#x3D; [expression for item in iterable if condition &#x3D;&#x3D; True]</code></pre>
 
-<p>例<br>列出從 1 - 10 的偶數</p>
-<pre class="language-python" data-language="python"><code class="language-python">numbers <span class="token operator">=</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
-even <span class="token operator">=</span> <span class="token punctuation">[</span>x <span class="token keyword">for</span> x <span class="token keyword">in</span> numbers <span class="token keyword">if</span> x <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">]</span>
+<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h3><p>列出從 1 - 10 的偶數</p>
+<pre class="language-py" data-language="py"><code class="language-py">numbers &#x3D; range(10)
+even &#x3D; [x for x in numbers if x % 2 &#x3D;&#x3D; 0]
 
-<span class="token keyword">print</span><span class="token punctuation">(</span>even<span class="token punctuation">)</span></code></pre>
+print(even)</code></pre>
 
       
     </div>
@@ -454,7 +566,7 @@ even <span class="token operator">=</span> <span class="token punctuation">[</sp
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-05-21 01:03:36" itemprop="dateModified" datetime="2021-05-21T01:03:36+00:00">2021-05-21</time>
+        <time title="Modified: 2021-05-21 23:40:51" itemprop="dateModified" datetime="2021-05-21T23:40:51+00:00">2021-05-21</time>
       </span>
 
   
