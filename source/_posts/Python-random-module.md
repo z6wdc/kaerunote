@@ -8,7 +8,7 @@ Python 有 random 這個 module
 
 ## How to import
 
-```python
+```py
 import random
 ```
 
@@ -16,7 +16,7 @@ import random
 
 ### randint
 
-```python
+```py
 random.randint(0, 100)
 ```
 
@@ -26,7 +26,7 @@ randint 會隨機從 0 <= n <= 100 的數字隨機挑選一個整數
 
 ### choices
 
-```python
+```py
 numbers = [1, 2, 3, 4, 5]
 random.choices(numbers, k=3)
 ```
@@ -41,7 +41,7 @@ random.choices(numbers, k=3)
 
 ### sample
 
-```python
+```py
 numbers = [1, 2, 3, 4, 5]
 random.sample(numbers, 3)
 ```
