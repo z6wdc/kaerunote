@@ -19,7 +19,7 @@ function 是你要對 iterable 使用的參數
 
 ### Example 1
 
-```py
+```python
 list(map(int, ['1', '2', '3']))
 ```
 
@@ -35,7 +35,7 @@ list(map(int, ['1', '2', '3']))
 
 ### Example 2
 
-```py
+```python
 def add(x, y):
     return x + y
 
@@ -65,7 +65,7 @@ Output
 
 ### Example 3
 
-```py
+```python
 list(map(int, ['10']*10, range(2, 11)))
 ```
 
