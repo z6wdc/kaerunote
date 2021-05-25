@@ -7,7 +7,7 @@ tags: ['Python']
 
 ## The Syntax
 
-```py
+```python
 newlist = [expression for item in iterable if condition == True]
 ```
 
@@ -15,7 +15,7 @@ newlist = [expression for item in iterable if condition == True]
 
 列出從 1 - 10 的偶數
 
-```py
+```python
 numbers = range(10)
 even = [x for x in numbers if x % 2 == 0]
 
