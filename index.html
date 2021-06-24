@@ -123,7 +123,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/kaerunote/archives">
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -168,6 +168,85 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/06/25/pandas-value-counts/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/kaerunote/images/avatar.gif">
+      <meta itemprop="name" content="z6wdc">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kaerunote">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/kaerunote/2021/06/25/pandas-value-counts/" class="post-title-link" itemprop="url">pandas value_counts</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-06-25 00:39:13" itemprop="dateCreated datePublished" datetime="2021-06-25T00:39:13+00:00">2021-06-25</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-06-24 15:48:45" itemprop="dateModified" datetime="2021-06-24T15:48:45+00:00">2021-06-24</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a target="_blank" rel="noopener" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.value_counts.html">value_counts</a></p>
+<p>用來計數 <code>Series</code> 裡面值出現的次數</p>
+<pre class="language-python" data-language="python"><code class="language-python">s<span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+<h2 id="normalize"><a href="#normalize" class="headerlink" title="normalize"></a>normalize</h2><p><code>normalize</code> 設成 True 就會回傳值出現次數佔的比例</p>
+<pre class="language-python" data-language="python"><code class="language-python">s<span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span>normalize<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span></code></pre>
+
+<h2 id="dropna"><a href="#dropna" class="headerlink" title="dropna"></a>dropna</h2><p><code>dropna</code> 設成 False 就會回傳 <code>NaN</code> 出現的次數</p>
+<pre class="language-python" data-language="python"><code class="language-python">s<span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span>dropna<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span></code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/06/24/pandas-shape/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -193,7 +272,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-06-24 17:41:34 / Modified: 08:48:39" itemprop="dateCreated datePublished" datetime="2021-06-24T17:41:34+00:00">2021-06-24</time>
+      <time title="Created: 2021-06-24 17:41:34 / Modified: 15:48:45" itemprop="dateCreated datePublished" datetime="2021-06-24T17:41:34+00:00">2021-06-24</time>
     </span>
 
   
@@ -273,7 +352,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-24 08:48:39" itemprop="dateModified" datetime="2021-06-24T08:48:39+00:00">2021-06-24</time>
+        <time title="Modified: 2021-06-24 15:48:45" itemprop="dateModified" datetime="2021-06-24T15:48:45+00:00">2021-06-24</time>
       </span>
 
   
@@ -355,7 +434,7 @@ pd<span class="token punctuation">.</span>DataFrame<span class="token punctuatio
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-24 08:48:39" itemprop="dateModified" datetime="2021-06-24T08:48:39+00:00">2021-06-24</time>
+        <time title="Modified: 2021-06-24 15:48:45" itemprop="dateModified" datetime="2021-06-24T15:48:45+00:00">2021-06-24</time>
       </span>
 
   
@@ -477,7 +556,7 @@ t<span class="token punctuation">[</span><span class="token number">1</span><spa
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-24 08:48:39" itemprop="dateModified" datetime="2021-06-24T08:48:39+00:00">2021-06-24</time>
+        <time title="Modified: 2021-06-24 15:48:45" itemprop="dateModified" datetime="2021-06-24T15:48:45+00:00">2021-06-24</time>
       </span>
 
   
@@ -589,7 +668,7 @@ list2 <span class="token operator">=</span> <span class="token punctuation">[</s
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-24 08:48:39" itemprop="dateModified" datetime="2021-06-24T08:48:39+00:00">2021-06-24</time>
+        <time title="Modified: 2021-06-24 15:48:45" itemprop="dateModified" datetime="2021-06-24T15:48:45+00:00">2021-06-24</time>
       </span>
 
   
@@ -680,7 +759,7 @@ random<span class="token punctuation">.</span>sample<span class="token punctuati
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-24 08:48:39" itemprop="dateModified" datetime="2021-06-24T08:48:39+00:00">2021-06-24</time>
+        <time title="Modified: 2021-06-24 15:48:45" itemprop="dateModified" datetime="2021-06-24T15:48:45+00:00">2021-06-24</time>
       </span>
 
   
@@ -766,7 +845,7 @@ random<span class="token punctuation">.</span>sample<span class="token punctuati
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-24 08:48:39" itemprop="dateModified" datetime="2021-06-24T08:48:39+00:00">2021-06-24</time>
+        <time title="Modified: 2021-06-24 15:48:45" itemprop="dateModified" datetime="2021-06-24T15:48:45+00:00">2021-06-24</time>
       </span>
 
   
@@ -844,7 +923,7 @@ even <span class="token operator">=</span> <span class="token punctuation">[</sp
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-24 08:48:39" itemprop="dateModified" datetime="2021-06-24T08:48:39+00:00">2021-06-24</time>
+        <time title="Modified: 2021-06-24 15:48:45" itemprop="dateModified" datetime="2021-06-24T15:48:45+00:00">2021-06-24</time>
       </span>
 
   
