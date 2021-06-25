@@ -1,7 +1,7 @@
 ---
 title: pandas value_counts
 date: 2021-06-25 00:39:13
-tags: ['pandas', 'Python']
+tags: ['pandas']
 ---
 [value_counts](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.value_counts.html)
 

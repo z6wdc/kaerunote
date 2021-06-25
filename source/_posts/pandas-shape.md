@@ -1,7 +1,7 @@
 ---
 title: pandas shape
 date: 2021-06-24 17:41:34
-tags: [pandas, Python]
+tags: ['pandas']
 ---
 想知道 `DataFrame` 有幾個 row 跟 columns 的時候
 
