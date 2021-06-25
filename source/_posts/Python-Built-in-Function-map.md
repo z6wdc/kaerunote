@@ -13,7 +13,7 @@ Python Built-in Function 的 [map()](https://docs.python.org/3/library/functions
 
 `map(function, iterable, ...)`
 
-function 是你要對 iterable 使用的參數
+function 就是要對 iterable 使用的函式
 
 回傳值為 map object
 

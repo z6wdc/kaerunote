@@ -1,7 +1,7 @@
 ---
 title: pandas import
 date: 2021-06-05 13:01:27
-tags: ['pandas', 'Python']
+tags: ['pandas']
 ---
 
 ## import
