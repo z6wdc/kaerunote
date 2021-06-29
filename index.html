@@ -123,7 +123,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/kaerunote/archives">
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -168,6 +168,87 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/06/29/pandas-head-tail/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/kaerunote/images/avatar.gif">
+      <meta itemprop="name" content="z6wdc">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kaerunote">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/kaerunote/2021/06/29/pandas-head-tail/" class="post-title-link" itemprop="url">pandas head tail</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-06-29 22:34:25 / Modified: 13:40:48" itemprop="dateCreated datePublished" datetime="2021-06-29T22:34:25+00:00">2021-06-29</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a target="_blank" rel="noopener" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.head.html">head</a></p>
+<p><a target="_blank" rel="noopener" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.tail.html">tail</a></p>
+<p><code>pandas</code> 可以利用 <code>head</code> 跟 <code>tail</code> 來取出前幾筆跟後幾筆的資料</p>
+<p>如果直接使用，預設會取出前 5 筆跟後 5 筆的資料</p>
+<pre class="language-python" data-language="python"><code class="language-python">df<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+<pre class="language-python" data-language="python"><code class="language-python">df<span class="token punctuation">.</span>tail<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+<p>也可以指定要取出幾筆資料</p>
+<p>例如取出前十筆資料</p>
+<pre class="language-python" data-language="python"><code class="language-python">df<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span></code></pre>
+
+<p><code>head</code> 跟 <code>tail</code> 也可以合併使用</p>
+<p>譬如說</p>
+<pre class="language-python" data-language="python"><code class="language-python">df<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">.</span>tail<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span></code></pre>
+
+<p>這樣就會取出前二十筆中最後十筆的資料</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/06/28/pandas-sort-values/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -191,10 +272,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-06-28 22:24:52 / Modified: 13:57:50" itemprop="dateCreated datePublished" datetime="2021-06-28T22:24:52+00:00">2021-06-28</time>
+      <time title="Created: 2021-06-28 22:24:52" itemprop="dateCreated datePublished" datetime="2021-06-28T22:24:52+00:00">2021-06-28</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-06-29 13:40:48" itemprop="dateModified" datetime="2021-06-29T13:40:48+00:00">2021-06-29</time>
+      </span>
 
   
 </div>
@@ -273,10 +360,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-06-28 22:09:40 / Modified: 13:57:50" itemprop="dateCreated datePublished" datetime="2021-06-28T22:09:40+00:00">2021-06-28</time>
+      <time title="Created: 2021-06-28 22:09:40" itemprop="dateCreated datePublished" datetime="2021-06-28T22:09:40+00:00">2021-06-28</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-06-29 13:40:48" itemprop="dateModified" datetime="2021-06-29T13:40:48+00:00">2021-06-29</time>
+      </span>
 
   
 </div>
@@ -361,7 +454,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-28 13:57:50" itemprop="dateModified" datetime="2021-06-28T13:57:50+00:00">2021-06-28</time>
+        <time title="Modified: 2021-06-29 13:40:48" itemprop="dateModified" datetime="2021-06-29T13:40:48+00:00">2021-06-29</time>
       </span>
 
   
@@ -443,7 +536,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-28 13:57:50" itemprop="dateModified" datetime="2021-06-28T13:57:50+00:00">2021-06-28</time>
+        <time title="Modified: 2021-06-29 13:40:48" itemprop="dateModified" datetime="2021-06-29T13:40:48+00:00">2021-06-29</time>
       </span>
 
   
@@ -522,7 +615,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-28 13:57:50" itemprop="dateModified" datetime="2021-06-28T13:57:50+00:00">2021-06-28</time>
+        <time title="Modified: 2021-06-29 13:40:48" itemprop="dateModified" datetime="2021-06-29T13:40:48+00:00">2021-06-29</time>
       </span>
 
   
@@ -602,7 +695,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-28 13:57:50" itemprop="dateModified" datetime="2021-06-28T13:57:50+00:00">2021-06-28</time>
+        <time title="Modified: 2021-06-29 13:40:48" itemprop="dateModified" datetime="2021-06-29T13:40:48+00:00">2021-06-29</time>
       </span>
 
   
@@ -684,7 +777,7 @@ pd<span class="token punctuation">.</span>DataFrame<span class="token punctuatio
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-28 13:57:50" itemprop="dateModified" datetime="2021-06-28T13:57:50+00:00">2021-06-28</time>
+        <time title="Modified: 2021-06-29 13:40:48" itemprop="dateModified" datetime="2021-06-29T13:40:48+00:00">2021-06-29</time>
       </span>
 
   
@@ -806,7 +899,7 @@ t<span class="token punctuation">[</span><span class="token number">1</span><spa
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-28 13:57:50" itemprop="dateModified" datetime="2021-06-28T13:57:50+00:00">2021-06-28</time>
+        <time title="Modified: 2021-06-29 13:40:48" itemprop="dateModified" datetime="2021-06-29T13:40:48+00:00">2021-06-29</time>
       </span>
 
   
@@ -918,7 +1011,7 @@ list2 <span class="token operator">=</span> <span class="token punctuation">[</s
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-28 13:57:50" itemprop="dateModified" datetime="2021-06-28T13:57:50+00:00">2021-06-28</time>
+        <time title="Modified: 2021-06-29 13:40:48" itemprop="dateModified" datetime="2021-06-29T13:40:48+00:00">2021-06-29</time>
       </span>
 
   
@@ -952,92 +1045,6 @@ random<span class="token punctuation">.</span>sample<span class="token punctuati
 <p>但要取出的數目不能大於 list 的 length</p>
 <p>不然就會發生下面的</p>
 <p><code>ValueError: Sample larger than population or is negative</code></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/05/07/Python-Built-in-Function-int/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/kaerunote/images/avatar.gif">
-      <meta itemprop="name" content="z6wdc">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="kaerunote">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/kaerunote/2021/05/07/Python-Built-in-Function-int/" class="post-title-link" itemprop="url">Python Built-in Function int()</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-05-07 01:02:43" itemprop="dateCreated datePublished" datetime="2021-05-07T01:02:43+00:00">2021-05-07</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-28 13:57:50" itemprop="dateModified" datetime="2021-06-28T13:57:50+00:00">2021-06-28</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Python Built-in Function 的 <a target="_blank" rel="noopener" href="https://docs.python.org/3/library/functions.html#int">int()</a></p>
-<h2 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h2><p>可以把 <code>str</code> 轉換成 <code>int</code></p>
-<pre class="language-python" data-language="python"><code class="language-python"><span class="token builtin">int</span><span class="token punctuation">(</span><span class="token string">'29'</span><span class="token punctuation">)</span></code></pre>
-
-<p>Output</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token number">29</span></code></pre>
-
-<h2 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h2><p>可以把 <code>float</code> 轉換成 <code>int</code><br>轉換的時候，會直接捨去小數點後的部分</p>
-<pre class="language-python" data-language="python"><code class="language-python"><span class="token builtin">int</span><span class="token punctuation">(</span><span class="token number">3.14</span><span class="token punctuation">)</span></code></pre>
-
-<pre class="language-python" data-language="python"><code class="language-python"><span class="token builtin">int</span><span class="token punctuation">(</span><span class="token number">7.0</span><span class="token punctuation">)</span></code></pre>
-
-<p>Output</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token number">3</span></code></pre>
-
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token number">7</span></code></pre>
 
       
     </div>
