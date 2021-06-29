@@ -123,7 +123,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/kaerunote/archives">
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -168,6 +168,93 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/06/30/pandas-groupby/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/kaerunote/images/avatar.gif">
+      <meta itemprop="name" content="z6wdc">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kaerunote">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/kaerunote/2021/06/30/pandas-groupby/" class="post-title-link" itemprop="url">pandas groupby</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-06-30 00:22:58" itemprop="dateCreated datePublished" datetime="2021-06-30T00:22:58+00:00">2021-06-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-06-29 16:18:33" itemprop="dateModified" datetime="2021-06-29T16:18:33+00:00">2021-06-29</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a target="_blank" rel="noopener" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.groupby.html">groupby</a></p>
+<p><code>groupby</code> 用來對資料做集結</p>
+<pre class="language-python" data-language="python"><code class="language-python">df<span class="token punctuation">.</span>groupby<span class="token punctuation">(</span><span class="token string">'column1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+<p>也可對複數個 column 做集結</p>
+<pre class="language-python" data-language="python"><code class="language-python">df<span class="token punctuation">.</span>groupby<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'column1'</span><span class="token punctuation">,</span><span class="token string">'column2'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+
+<p>集結後也可以指定對哪個 column 做處理</p>
+<pre class="language-python" data-language="python"><code class="language-python">df<span class="token punctuation">.</span>groupby<span class="token punctuation">(</span><span class="token string">'column1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">'column2'</span><span class="token punctuation">]</span></code></pre>
+
+<p>也可以指定複數個 column</p>
+<pre class="language-python" data-language="python"><code class="language-python">df<span class="token punctuation">.</span>groupby<span class="token punctuation">(</span><span class="token string">'column1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'column2'</span><span class="token punctuation">,</span><span class="token string">'column3'</span><span class="token punctuation">]</span><span class="token punctuation">]</span></code></pre>
+
+<p>不指定的話，就是對 column1 以外的 column 做處理</p>
+<p>關於處理，也可以同時指定多個</p>
+<p>例如同時使用 <code>count</code> <code>sum</code> <code>max</code> <code>min</code></p>
+<pre class="language-python" data-language="python"><code class="language-python">df<span class="token punctuation">.</span>groupby<span class="token punctuation">(</span><span class="token string">'column1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>agg<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'count'</span><span class="token punctuation">,</span><span class="token string">'sum'</span><span class="token punctuation">,</span><span class="token string">'max'</span><span class="token punctuation">,</span><span class="token string">'min'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">'column2'</span><span class="token punctuation">]</span></code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/06/29/pandas-head-tail/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -193,7 +280,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-06-29 22:34:25 / Modified: 13:40:48" itemprop="dateCreated datePublished" datetime="2021-06-29T22:34:25+00:00">2021-06-29</time>
+      <time title="Created: 2021-06-29 22:34:25 / Modified: 16:18:33" itemprop="dateCreated datePublished" datetime="2021-06-29T22:34:25+00:00">2021-06-29</time>
     </span>
 
   
@@ -280,7 +367,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-29 13:40:48" itemprop="dateModified" datetime="2021-06-29T13:40:48+00:00">2021-06-29</time>
+        <time title="Modified: 2021-06-29 16:18:33" itemprop="dateModified" datetime="2021-06-29T16:18:33+00:00">2021-06-29</time>
       </span>
 
   
@@ -368,7 +455,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-29 13:40:48" itemprop="dateModified" datetime="2021-06-29T13:40:48+00:00">2021-06-29</time>
+        <time title="Modified: 2021-06-29 16:18:33" itemprop="dateModified" datetime="2021-06-29T16:18:33+00:00">2021-06-29</time>
       </span>
 
   
@@ -454,7 +541,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-29 13:40:48" itemprop="dateModified" datetime="2021-06-29T13:40:48+00:00">2021-06-29</time>
+        <time title="Modified: 2021-06-29 16:18:33" itemprop="dateModified" datetime="2021-06-29T16:18:33+00:00">2021-06-29</time>
       </span>
 
   
@@ -536,7 +623,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-29 13:40:48" itemprop="dateModified" datetime="2021-06-29T13:40:48+00:00">2021-06-29</time>
+        <time title="Modified: 2021-06-29 16:18:33" itemprop="dateModified" datetime="2021-06-29T16:18:33+00:00">2021-06-29</time>
       </span>
 
   
@@ -615,7 +702,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-29 13:40:48" itemprop="dateModified" datetime="2021-06-29T13:40:48+00:00">2021-06-29</time>
+        <time title="Modified: 2021-06-29 16:18:33" itemprop="dateModified" datetime="2021-06-29T16:18:33+00:00">2021-06-29</time>
       </span>
 
   
@@ -695,7 +782,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-29 13:40:48" itemprop="dateModified" datetime="2021-06-29T13:40:48+00:00">2021-06-29</time>
+        <time title="Modified: 2021-06-29 16:18:33" itemprop="dateModified" datetime="2021-06-29T16:18:33+00:00">2021-06-29</time>
       </span>
 
   
@@ -777,7 +864,7 @@ pd<span class="token punctuation">.</span>DataFrame<span class="token punctuatio
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-29 13:40:48" itemprop="dateModified" datetime="2021-06-29T13:40:48+00:00">2021-06-29</time>
+        <time title="Modified: 2021-06-29 16:18:33" itemprop="dateModified" datetime="2021-06-29T16:18:33+00:00">2021-06-29</time>
       </span>
 
   
@@ -899,7 +986,7 @@ t<span class="token punctuation">[</span><span class="token number">1</span><spa
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-29 13:40:48" itemprop="dateModified" datetime="2021-06-29T13:40:48+00:00">2021-06-29</time>
+        <time title="Modified: 2021-06-29 16:18:33" itemprop="dateModified" datetime="2021-06-29T16:18:33+00:00">2021-06-29</time>
       </span>
 
   
@@ -954,97 +1041,6 @@ list2 <span class="token operator">=</span> <span class="token punctuation">[</s
 <p>因為是 <code>range(2, 11)</code></p>
 <p>所以結果會印出 10 這個數</p>
 <p>在 2 進位到 10 進位下的數值</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/05/18/Python-random-module/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/kaerunote/images/avatar.gif">
-      <meta itemprop="name" content="z6wdc">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="kaerunote">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/kaerunote/2021/05/18/Python-random-module/" class="post-title-link" itemprop="url">Python random module</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-05-18 22:36:49" itemprop="dateCreated datePublished" datetime="2021-05-18T22:36:49+00:00">2021-05-18</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-29 13:40:48" itemprop="dateModified" datetime="2021-06-29T13:40:48+00:00">2021-06-29</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Python 有 random 這個 module<br>除了可以產生亂數外，還可以隨機挑選資料  </p>
-<h2 id="How-to-import"><a href="#How-to-import" class="headerlink" title="How to import"></a>How to import</h2><pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> random</code></pre>
-
-<h2 id="Functions-for-integers"><a href="#Functions-for-integers" class="headerlink" title="Functions for integers"></a>Functions for integers</h2><h3 id="randint"><a href="#randint" class="headerlink" title="randint"></a>randint</h3><pre class="language-python" data-language="python"><code class="language-python">random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span></code></pre>
-
-<p>randint 會隨機從 0 &lt;= n &lt;= 100 的數字隨機挑選一個整數</p>
-<h2 id="Functions-for-sequences"><a href="#Functions-for-sequences" class="headerlink" title="Functions for sequences"></a>Functions for sequences</h2><h3 id="choices"><a href="#choices" class="headerlink" title="choices"></a>choices</h3><pre class="language-python" data-language="python"><code class="language-python">numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
-random<span class="token punctuation">.</span>choices<span class="token punctuation">(</span>numbers<span class="token punctuation">,</span> k<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span></code></pre>
-
-<p><code>choices</code> 會隨機從指定的 list 中重複取出你要的數目</p>
-<p>要注意的是指定數目的時候需要寫出 keyword <code>k</code></p>
-<p>像是例子中 k=3 就會取出三個</p>
-<p>不指定 k 的話，預設值為 1</p>
-<h3 id="sample"><a href="#sample" class="headerlink" title="sample"></a>sample</h3><pre class="language-python" data-language="python"><code class="language-python">numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
-random<span class="token punctuation">.</span>sample<span class="token punctuation">(</span>numbers<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span></code></pre>
-
-<p><code>sample</code> 會隨機從指定的 list 中取出你要的數目</p>
-<p>而且數字不重複</p>
-<p>但要取出的數目不能大於 list 的 length</p>
-<p>不然就會發生下面的</p>
-<p><code>ValueError: Sample larger than population or is negative</code></p>
 
       
     </div>
