@@ -1,7 +1,7 @@
 ---
-title: SQL SELECT list expression references column x which is neither grouped nor aggregated at [position]
+title: BigQuery SELECT list expression references column x which is neither grouped nor aggregated at [position]
 date: 2021-05-05 19:05:52
-tags: ['SQL', 'BigQuery']
+tags: ['BigQuery']
 ---
 當我們使用 `GROUP BY` 的時候  
 就有機會看到這 error message
