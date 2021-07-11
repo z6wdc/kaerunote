@@ -26,3 +26,25 @@ s.value_counts(normalize=True)
 ```python
 s.value_counts(dropna=False)
 ```
+
+## sort
+
+`value_counts` 預設會對出現的次數做排序
+
+可以利用 `sort` 設定成不要排序
+
+```python
+s.value_counts(sort=False)
+```
+
+## ascending
+
+`value_counts` 預設會對出現的次數做排序
+
+而排序的方式是預設從大排到小
+
+如果想反過來可以設定 `ascending` 為 `True`
+
+```python
+s.value_counts(ascending=True)
+```
