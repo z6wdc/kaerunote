@@ -20,28 +20,28 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"z6wdc.github.io","root":"/kaerunote/","images":"/kaerunote/images","scheme":"Mist","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/kaerunote/js/config.js"></script>
-<meta name="description" content="isnull() 可以用 isnull() 來找出 NaN 的值 也可以寫成 isna() df.isnull()  也可以和 any() 跟 sum() 搭配使用 sum()可以計算每一個 column 各有幾個 NaN df.isnull().sum()  也可以計算每一個 row 各有幾個 NaN df.isnull().sum(axis&#x3D;1)  any()用 any() 來判斷每一個 co">
+<meta name="description" content="在 Recommender System 中常見的手法 Rank其實在還沒有什麼資料的時候 直接推薦使用者 rank 高的 item 就是個常見的做法 在計算 rank 的時候 也可以參考這個算式 Content Based Filtering利用 item 本身的資訊來找出相似的 item 並推薦 如果 item 有內容介紹之類的文章 也可以利用 TF-IDF 來加以分析 Similarity計">
 <meta property="og:type" content="article">
-<meta property="og:title" content="pandas isnull">
-<meta property="og:url" content="https://z6wdc.github.io/kaerunote/2021/07/01/pandas-isnull/index.html">
+<meta property="og:title" content="Recommender System Model">
+<meta property="og:url" content="https://z6wdc.github.io/kaerunote/2021/07/12/Recommender-System-Model/index.html">
 <meta property="og:site_name" content="kaerunote">
-<meta property="og:description" content="isnull() 可以用 isnull() 來找出 NaN 的值 也可以寫成 isna() df.isnull()  也可以和 any() 跟 sum() 搭配使用 sum()可以計算每一個 column 各有幾個 NaN df.isnull().sum()  也可以計算每一個 row 各有幾個 NaN df.isnull().sum(axis&#x3D;1)  any()用 any() 來判斷每一個 co">
+<meta property="og:description" content="在 Recommender System 中常見的手法 Rank其實在還沒有什麼資料的時候 直接推薦使用者 rank 高的 item 就是個常見的做法 在計算 rank 的時候 也可以參考這個算式 Content Based Filtering利用 item 本身的資訊來找出相似的 item 並推薦 如果 item 有內容介紹之類的文章 也可以利用 TF-IDF 來加以分析 Similarity計">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-07-01T00:32:27.000Z">
+<meta property="article:published_time" content="2021-07-12T12:40:47.000Z">
 <meta property="article:modified_time" content="2021-07-12T16:08:49.507Z">
 <meta property="article:author" content="z6wdc">
-<meta property="article:tag" content="pandas">
+<meta property="article:tag" content="Recommender System">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://z6wdc.github.io/kaerunote/2021/07/01/pandas-isnull/">
+<link rel="canonical" href="https://z6wdc.github.io/kaerunote/2021/07/12/Recommender-System-Model/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://z6wdc.github.io/kaerunote/2021/07/01/pandas-isnull/","path":"2021/07/01/pandas-isnull/","title":"pandas isnull"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://z6wdc.github.io/kaerunote/2021/07/12/Recommender-System-Model/","path":"2021/07/12/Recommender-System-Model/","title":"Recommender System Model"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>pandas isnull | kaerunote</title>
+<title>Recommender System Model | kaerunote</title>
   
 
 
@@ -116,7 +116,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#sum"><span class="nav-number">1.</span> <span class="nav-text">sum()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#any"><span class="nav-number">2.</span> <span class="nav-text">any()</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Rank"><span class="nav-number">1.</span> <span class="nav-text">Rank</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Content-Based-Filtering"><span class="nav-number">2.</span> <span class="nav-text">Content Based Filtering</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Similarity"><span class="nav-number">2.1.</span> <span class="nav-text">Similarity</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collaborative-Filtering"><span class="nav-number">3.</span> <span class="nav-text">Collaborative Filtering</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Model-Based"><span class="nav-number">3.1.</span> <span class="nav-text">Model Based</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Memory-Based"><span class="nav-number">3.2.</span> <span class="nav-text">Memory Based</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#User-Based"><span class="nav-number">3.2.1.</span> <span class="nav-text">User Based</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Item-Based"><span class="nav-number">3.2.2.</span> <span class="nav-text">Item Based</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hybrid"><span class="nav-number">4.</span> <span class="nav-text">Hybrid</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -177,7 +177,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/07/01/pandas-isnull/">
+    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/07/12/Recommender-System-Model/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/kaerunote/images/avatar.gif">
@@ -190,7 +190,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          pandas isnull
+          Recommender System Model
         </h1>
 
         <div class="post-meta-container">
@@ -200,16 +200,10 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2021-07-01 00:32:27" itemprop="dateCreated datePublished" datetime="2021-07-01T00:32:27+00:00">2021-07-01</time>
+      <time title="Created: 2021-07-12 12:40:47 / Modified: 16:08:49" itemprop="dateCreated datePublished" datetime="2021-07-12T12:40:47+00:00">2021-07-12</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-12 16:08:49" itemprop="dateModified" datetime="2021-07-12T16:08:49+00:00">2021-07-12</time>
-      </span>
 
   
 </div>
@@ -221,24 +215,172 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><a target="_blank" rel="noopener" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.isnull.html">isnull()</a></p>
-<p>可以用 <code>isnull()</code> 來找出 <code>NaN</code> 的值</p>
-<p>也可以寫成 <code>isna()</code></p>
-<pre class="language-python" data-language="python"><code class="language-python">df<span class="token punctuation">.</span>isnull<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-
-<p>也可以和 <code>any()</code> 跟 <code>sum()</code> 搭配使用</p>
-<h2 id="sum"><a href="#sum" class="headerlink" title="sum()"></a>sum()</h2><p>可以計算每一個 column 各有幾個 <code>NaN</code></p>
-<pre class="language-python" data-language="python"><code class="language-python">df<span class="token punctuation">.</span>isnull<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-
-<p>也可以計算每一個 row 各有幾個 <code>NaN</code></p>
-<pre class="language-python" data-language="python"><code class="language-python">df<span class="token punctuation">.</span>isnull<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span></code></pre>
-
-<h2 id="any"><a href="#any" class="headerlink" title="any()"></a>any()</h2><p>用 <code>any()</code> 來判斷每一個 column 有沒有 <code>NaN</code> 值</p>
-<pre class="language-python" data-language="python"><code class="language-python">df<span class="token punctuation">.</span>isnull<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">any</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-
-<p>想要看那一個 row 缺值的話</p>
-<pre class="language-python" data-language="python"><code class="language-python">query <span class="token operator">=</span> df<span class="token punctuation">.</span>isnull<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">any</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
-df<span class="token punctuation">[</span>query<span class="token punctuation">]</span><span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+        <p>在 Recommender System 中常見的手法</p>
+<h2 id="Rank"><a href="#Rank" class="headerlink" title="Rank"></a>Rank</h2><p>其實在還沒有什麼資料的時候</p>
+<p>直接推薦使用者 rank 高的 item 就是個常見的做法</p>
+<p>在計算 rank 的時候</p>
+<p>也可以參考這個<a target="_blank" rel="noopener" href="https://myanimelist.net/info.php?go=topanime">算式</a></p>
+<h2 id="Content-Based-Filtering"><a href="#Content-Based-Filtering" class="headerlink" title="Content Based Filtering"></a>Content Based Filtering</h2><p>利用 item 本身的資訊來找出相似的 item 並推薦</p>
+<p>如果 item 有內容介紹之類的文章</p>
+<p>也可以利用 TF-IDF 來加以分析</p>
+<h3 id="Similarity"><a href="#Similarity" class="headerlink" title="Similarity"></a>Similarity</h3><p>計算相似度的常用方法</p>
+<ul>
+<li><p>mean squared difference</p>
+</li>
+<li><p>Jaccard similarity</p>
+</li>
+<li><p>Cosine Similarity</p>
+</li>
+<li><p>Pearson Correlation Coefficient</p>
+</li>
+</ul>
+<h2 id="Collaborative-Filtering"><a href="#Collaborative-Filtering" class="headerlink" title="Collaborative Filtering"></a>Collaborative Filtering</h2><h3 id="Model-Based"><a href="#Model-Based" class="headerlink" title="Model Based"></a>Model Based</h3><p>PCA</p>
+<p>SVD</p>
+<p>Matrix Factorisation</p>
+<h3 id="Memory-Based"><a href="#Memory-Based" class="headerlink" title="Memory Based"></a>Memory Based</h3><h4 id="User-Based"><a href="#User-Based" class="headerlink" title="User Based"></a>User Based</h4><p>先找與你喜好相近的人</p>
+<p>再推薦他們喜歡的東西給你</p>
+<p>流程如下：</p>
+<ol>
+<li><p>user -&gt; item rating matrix</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>item1</th>
+<th>item2</th>
+<th>item3</th>
+<th>item4</th>
+<th>item5</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>user1</td>
+<td>4</td>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>user2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>user3</td>
+<td></td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>user -&gt; user similarity matrix</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>user1</th>
+<th>user2</th>
+<th>user3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>user1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>user2</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>user3</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>look up similar users</p>
+</li>
+<li><p>candidate filtering</p>
+</li>
+</ol>
+<h4 id="Item-Based"><a href="#Item-Based" class="headerlink" title="Item Based"></a>Item Based</h4><p>用你喜歡的 Item 去找相似的 Item 來推薦你</p>
+<p>流程如下：</p>
+<ol>
+<li><p>item -&gt; user rating matrix</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>user1</th>
+<th>user2</th>
+<th>user3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>item1</td>
+<td>4</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td>user2</td>
+<td></td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>user3</td>
+<td></td>
+<td>5</td>
+<td>5</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>item -&gt; item similarity matrix</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>item1</th>
+<th>item2</th>
+<th>item3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>item1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>item2</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>item3</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>candidate filtering</p>
+</li>
+</ol>
+<h2 id="Hybrid"><a href="#Hybrid" class="headerlink" title="Hybrid"></a>Hybrid</h2><p>綜合 <code>Content Based</code> 跟 <code>Collaborative</code> 的方法</p>
 
     </div>
 
@@ -248,21 +390,18 @@ df<span class="token punctuation">[</span>query<span class="token punctuation">]
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/kaerunote/tags/pandas/" rel="tag"><i class="fa fa-tag"></i> pandas</a>
+              <a href="/kaerunote/tags/Recommender-System/" rel="tag"><i class="fa fa-tag"></i> Recommender System</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/kaerunote/2021/06/30/pandas-groupby/" rel="prev" title="pandas groupby">
-                  <i class="fa fa-chevron-left"></i> pandas groupby
+                <a href="/kaerunote/2021/07/11/Mac-pbcopy-pbpaste/" rel="prev" title="Mac pbcopy pbpaste">
+                  <i class="fa fa-chevron-left"></i> Mac pbcopy pbpaste
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/kaerunote/2021/07/04/pandas-clip/" rel="next" title="pandas clip">
-                  pandas clip <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
