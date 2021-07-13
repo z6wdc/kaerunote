@@ -124,7 +124,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/kaerunote/archives">
-          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-count">25</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -170,6 +170,84 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/07/14/Python-search-vs-match/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/kaerunote/images/avatar.gif">
+      <meta itemprop="name" content="z6wdc">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kaerunote">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/kaerunote/2021/07/14/Python-search-vs-match/" class="post-title-link" itemprop="url">Python search vs match</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-07-14 01:00:37" itemprop="dateCreated datePublished" datetime="2021-07-14T01:00:37+00:00">2021-07-14</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-07-13 16:08:23" itemprop="dateModified" datetime="2021-07-13T16:08:23+00:00">2021-07-13</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a target="_blank" rel="noopener" href="https://docs.python.org/3/library/re.html#search-vs-match"><code>search</code> vs <code>match</code></a></p>
+<p>在 Python 中</p>
+<p><code>re.search()</code> 會找目標文字中第一個出現的字串</p>
+<p><code>re.match()</code> 只會找目標文字中最初出現的字串</p>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> re
+
+re<span class="token punctuation">.</span>match<span class="token punctuation">(</span><span class="token string">"c"</span><span class="token punctuation">,</span> <span class="token string">"abcdef"</span><span class="token punctuation">)</span> <span class="token comment"># No match</span>
+re<span class="token punctuation">.</span>search<span class="token punctuation">(</span><span class="token string">"c"</span><span class="token punctuation">,</span> <span class="token string">"abcdef"</span><span class="token punctuation">)</span> <span class="token comment"># Match</span></code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/07/13/pandas-dtypes/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -195,7 +273,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-07-13 12:08:45 / Modified: 05:10:16" itemprop="dateCreated datePublished" datetime="2021-07-13T12:08:45+00:00">2021-07-13</time>
+      <time title="Created: 2021-07-13 12:08:45 / Modified: 16:08:23" itemprop="dateCreated datePublished" datetime="2021-07-13T12:08:45+00:00">2021-07-13</time>
     </span>
 
   
@@ -263,7 +341,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-07-13 12:03:23 / Modified: 05:10:16" itemprop="dateCreated datePublished" datetime="2021-07-13T12:03:23+00:00">2021-07-13</time>
+      <time title="Created: 2021-07-13 12:03:23 / Modified: 16:08:23" itemprop="dateCreated datePublished" datetime="2021-07-13T12:03:23+00:00">2021-07-13</time>
     </span>
 
   
@@ -339,7 +417,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-07-13 11:54:49 / Modified: 05:10:16" itemprop="dateCreated datePublished" datetime="2021-07-13T11:54:49+00:00">2021-07-13</time>
+      <time title="Created: 2021-07-13 11:54:49 / Modified: 16:08:23" itemprop="dateCreated datePublished" datetime="2021-07-13T11:54:49+00:00">2021-07-13</time>
     </span>
 
   
@@ -411,7 +489,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-13 05:10:16" itemprop="dateModified" datetime="2021-07-13T05:10:16+00:00">2021-07-13</time>
+        <time title="Modified: 2021-07-13 16:08:23" itemprop="dateModified" datetime="2021-07-13T16:08:23+00:00">2021-07-13</time>
       </span>
 
   
@@ -647,7 +725,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-13 05:10:16" itemprop="dateModified" datetime="2021-07-13T05:10:16+00:00">2021-07-13</time>
+        <time title="Modified: 2021-07-13 16:08:23" itemprop="dateModified" datetime="2021-07-13T16:08:23+00:00">2021-07-13</time>
       </span>
 
   
@@ -724,7 +802,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-13 05:10:16" itemprop="dateModified" datetime="2021-07-13T05:10:16+00:00">2021-07-13</time>
+        <time title="Modified: 2021-07-13 16:08:23" itemprop="dateModified" datetime="2021-07-13T16:08:23+00:00">2021-07-13</time>
       </span>
 
   
@@ -806,7 +884,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-13 05:10:16" itemprop="dateModified" datetime="2021-07-13T05:10:16+00:00">2021-07-13</time>
+        <time title="Modified: 2021-07-13 16:08:23" itemprop="dateModified" datetime="2021-07-13T16:08:23+00:00">2021-07-13</time>
       </span>
 
   
@@ -891,7 +969,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-13 05:10:16" itemprop="dateModified" datetime="2021-07-13T05:10:16+00:00">2021-07-13</time>
+        <time title="Modified: 2021-07-13 16:08:23" itemprop="dateModified" datetime="2021-07-13T16:08:23+00:00">2021-07-13</time>
       </span>
 
   
@@ -976,7 +1054,7 @@ d <span class="token operator">=</span> defaultdict<span class="token punctuatio
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-13 05:10:16" itemprop="dateModified" datetime="2021-07-13T05:10:16+00:00">2021-07-13</time>
+        <time title="Modified: 2021-07-13 16:08:23" itemprop="dateModified" datetime="2021-07-13T16:08:23+00:00">2021-07-13</time>
       </span>
 
   
@@ -994,94 +1072,6 @@ d <span class="token operator">=</span> defaultdict<span class="token punctuatio
 <p>超過上下界的值</p>
 <p>就會各自被設定成上下界的值</p>
 <pre class="language-python" data-language="python"><code class="language-python">df<span class="token punctuation">.</span>clip<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span></code></pre>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/07/01/pandas-isnull/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/kaerunote/images/avatar.gif">
-      <meta itemprop="name" content="z6wdc">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="kaerunote">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/kaerunote/2021/07/01/pandas-isnull/" class="post-title-link" itemprop="url">pandas isnull</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-07-01 00:32:27" itemprop="dateCreated datePublished" datetime="2021-07-01T00:32:27+00:00">2021-07-01</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-13 05:10:16" itemprop="dateModified" datetime="2021-07-13T05:10:16+00:00">2021-07-13</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.isnull.html">isnull()</a></p>
-<p>可以用 <code>isnull()</code> 來找出 <code>NaN</code> 的值</p>
-<p>也可以寫成 <code>isna()</code></p>
-<pre class="language-python" data-language="python"><code class="language-python">df<span class="token punctuation">.</span>isnull<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-
-<p>也可以和 <code>any()</code> 跟 <code>sum()</code> 搭配使用</p>
-<h2 id="sum"><a href="#sum" class="headerlink" title="sum()"></a>sum()</h2><p>可以計算每一個 column 各有幾個 <code>NaN</code></p>
-<pre class="language-python" data-language="python"><code class="language-python">df<span class="token punctuation">.</span>isnull<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-
-<p>也可以計算每一個 row 各有幾個 <code>NaN</code></p>
-<pre class="language-python" data-language="python"><code class="language-python">df<span class="token punctuation">.</span>isnull<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span></code></pre>
-
-<h2 id="any"><a href="#any" class="headerlink" title="any()"></a>any()</h2><p>用 <code>any()</code> 來判斷每一個 column 有沒有 <code>NaN</code> 值</p>
-<pre class="language-python" data-language="python"><code class="language-python">df<span class="token punctuation">.</span>isnull<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">any</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-
-<p>想要看那一個 row 缺值的話</p>
-<pre class="language-python" data-language="python"><code class="language-python">query <span class="token operator">=</span> df<span class="token punctuation">.</span>isnull<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">any</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
-df<span class="token punctuation">[</span>query<span class="token punctuation">]</span><span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 
       
     </div>

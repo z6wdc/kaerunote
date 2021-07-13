@@ -124,7 +124,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/kaerunote/archives">
-          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-count">25</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -170,6 +170,118 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/05/22/Python-Built-in-Function-map/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/kaerunote/images/avatar.gif">
+      <meta itemprop="name" content="z6wdc">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kaerunote">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/kaerunote/2021/05/22/Python-Built-in-Function-map/" class="post-title-link" itemprop="url">Python Built-in Function map()</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-05-22 07:09:40" itemprop="dateCreated datePublished" datetime="2021-05-22T07:09:40+00:00">2021-05-22</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-07-13 16:08:23" itemprop="dateModified" datetime="2021-07-13T16:08:23+00:00">2021-07-13</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>我們可以利用</p>
+<p>Python Built-in Function 的 <a target="_blank" rel="noopener" href="https://docs.python.org/3/library/functions.html#map">map()</a></p>
+<p>來對 iterable object 做想要的處理</p>
+<h2 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h2><p><code>map(function, iterable, ...)</code></p>
+<p>function 就是要對 iterable 使用的函式</p>
+<p>回傳值為 map object</p>
+<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h3><pre class="language-python" data-language="python"><code class="language-python"><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span> <span class="token string">'2'</span><span class="token punctuation">,</span> <span class="token string">'3'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+
+<p>這個例子中</p>
+<p><code>map()</code> 會把 <code>[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;]</code> 這個 list 裡面的字串當作參數</p>
+<p>去使用 <code>int()</code> 這個 function</p>
+<p>因為 <code>map()</code> 回傳值為 map object</p>
+<p>最後對回傳值使用 <code>list()</code> 可以方便檢查結果</p>
+<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h3><pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">add</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> x <span class="token operator">+</span> y
+
+list1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+list2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span>
+
+<span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span>add<span class="token punctuation">,</span> list1<span class="token punctuation">,</span> list2<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+
+<p>Output</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span><span class="token number">4</span>, <span class="token number">6</span><span class="token punctuation">]</span></code></pre>
+
+<p><code>map()</code> 也可以使用自己定義的 function</p>
+<p>如果自定義的 function 有兩個參數</p>
+<p>後面就必須帶入相對應數量的 iterable</p>
+<p>這個例子中為兩個 list</p>
+<p>另外當 list 不一樣長的時候</p>
+<p>最短的 list 處理完時就會停止</p>
+<h3 id="Example-3"><a href="#Example-3" class="headerlink" title="Example 3"></a>Example 3</h3><pre class="language-python" data-language="python"><code class="language-python"><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'10'</span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+
+<p>Output</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span><span class="token number">2</span>, <span class="token number">3</span>, <span class="token number">4</span>, <span class="token number">5</span>, <span class="token number">6</span>, <span class="token number">7</span>, <span class="token number">8</span>, <span class="token number">9</span>, <span class="token number">10</span><span class="token punctuation">]</span></code></pre>
+
+<p>這個例子中還是使用 <code>int()</code></p>
+<p>這次對 <code>int()</code> 輸入兩個參數</p>
+<p>第一個為要轉換的數字，使用了字串 10</p>
+<p>第二個是要轉換的進制</p>
+<p>因為是 <code>range(2, 11)</code></p>
+<p>所以結果會印出 10 這個數</p>
+<p>在 2 進位到 10 進位下的數值</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/05/18/Python-random-module/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -201,7 +313,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-13 05:10:16" itemprop="dateModified" datetime="2021-07-13T05:10:16+00:00">2021-07-13</time>
+        <time title="Modified: 2021-07-13 16:08:23" itemprop="dateModified" datetime="2021-07-13T16:08:23+00:00">2021-07-13</time>
       </span>
 
   
@@ -292,7 +404,7 @@ random<span class="token punctuation">.</span>sample<span class="token punctuati
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-13 05:10:16" itemprop="dateModified" datetime="2021-07-13T05:10:16+00:00">2021-07-13</time>
+        <time title="Modified: 2021-07-13 16:08:23" itemprop="dateModified" datetime="2021-07-13T16:08:23+00:00">2021-07-13</time>
       </span>
 
   
@@ -378,7 +490,7 @@ random<span class="token punctuation">.</span>sample<span class="token punctuati
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-13 05:10:16" itemprop="dateModified" datetime="2021-07-13T05:10:16+00:00">2021-07-13</time>
+        <time title="Modified: 2021-07-13 16:08:23" itemprop="dateModified" datetime="2021-07-13T16:08:23+00:00">2021-07-13</time>
       </span>
 
   
@@ -456,7 +568,7 @@ even <span class="token operator">=</span> <span class="token punctuation">[</sp
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-13 05:10:16" itemprop="dateModified" datetime="2021-07-13T05:10:16+00:00">2021-07-13</time>
+        <time title="Modified: 2021-07-13 16:08:23" itemprop="dateModified" datetime="2021-07-13T16:08:23+00:00">2021-07-13</time>
       </span>
 
   
