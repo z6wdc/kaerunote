@@ -124,7 +124,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/kaerunote/archives">
-          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-count">26</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -170,6 +170,98 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/07/15/Python-strip/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/kaerunote/images/avatar.gif">
+      <meta itemprop="name" content="z6wdc">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kaerunote">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/kaerunote/2021/07/15/Python-strip/" class="post-title-link" itemprop="url">Python strip</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-07-15 08:19:03" itemprop="dateCreated datePublished" datetime="2021-07-15T08:19:03+00:00">2021-07-15</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-07-14 23:30:06" itemprop="dateModified" datetime="2021-07-14T23:30:06+00:00">2021-07-14</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a target="_blank" rel="noopener" href="https://docs.python.org/3/library/stdtypes.html#str.strip">strip()</a></p>
+<p>strip() 可以用來刪除字串前後的字元</p>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token string">'www.example.com'</span><span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token string">'cmowz.'</span><span class="token punctuation">)</span>
+<span class="token comment"># 'example'</span></code></pre>
+
+<p>也可以用來刪除空白或是換行記號</p>
+<p>預設值是刪除空白所以不用輸入參數</p>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token string">' example '</span><span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 'example'</span></code></pre>
+
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token string">'\nexample\n'</span><span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token string">'\n'</span><span class="token punctuation">)</span>
+<span class="token comment"># 'example'</span></code></pre>
+
+<h2 id="lstrip"><a href="#lstrip" class="headerlink" title="lstrip()"></a>lstrip()</h2><p><a target="_blank" rel="noopener" href="https://docs.python.org/3/library/stdtypes.html#str.lstrip">lstrip()</a></p>
+<p><code>lstrip()</code> 只會刪除左邊的字元</p>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token string">'www.example.com'</span><span class="token punctuation">.</span>lstrip<span class="token punctuation">(</span><span class="token string">'cmowz.'</span><span class="token punctuation">)</span>
+<span class="token comment"># 'example.com'</span></code></pre>
+
+<h2 id="rstrip"><a href="#rstrip" class="headerlink" title="rstrip()"></a>rstrip()</h2><p><a target="_blank" rel="noopener" href="https://docs.python.org/3/library/stdtypes.html#str.lstrip">rstrip()</a></p>
+<p><code>rstrip()</code> 只會刪除右邊的字元</p>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token string">'mississippi'</span><span class="token punctuation">.</span>rstrip<span class="token punctuation">(</span><span class="token string">'ipz'</span><span class="token punctuation">)</span>
+<span class="token comment"># 'mississ'</span></code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/07/14/Python-search-vs-match/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -193,16 +285,10 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2021-07-14 01:00:37" itemprop="dateCreated datePublished" datetime="2021-07-14T01:00:37+00:00">2021-07-14</time>
+      <time title="Created: 2021-07-14 01:00:37 / Modified: 23:30:06" itemprop="dateCreated datePublished" datetime="2021-07-14T01:00:37+00:00">2021-07-14</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-13 16:08:23" itemprop="dateModified" datetime="2021-07-13T16:08:23+00:00">2021-07-13</time>
-      </span>
 
   
 </div>
@@ -271,10 +357,16 @@ re<span class="token punctuation">.</span>search<span class="token punctuation">
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-07-13 12:08:45 / Modified: 16:08:23" itemprop="dateCreated datePublished" datetime="2021-07-13T12:08:45+00:00">2021-07-13</time>
+      <time title="Created: 2021-07-13 12:08:45" itemprop="dateCreated datePublished" datetime="2021-07-13T12:08:45+00:00">2021-07-13</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-07-14 23:30:06" itemprop="dateModified" datetime="2021-07-14T23:30:06+00:00">2021-07-14</time>
+      </span>
 
   
 </div>
@@ -339,10 +431,16 @@ re<span class="token punctuation">.</span>search<span class="token punctuation">
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-07-13 12:03:23 / Modified: 16:08:23" itemprop="dateCreated datePublished" datetime="2021-07-13T12:03:23+00:00">2021-07-13</time>
+      <time title="Created: 2021-07-13 12:03:23" itemprop="dateCreated datePublished" datetime="2021-07-13T12:03:23+00:00">2021-07-13</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-07-14 23:30:06" itemprop="dateModified" datetime="2021-07-14T23:30:06+00:00">2021-07-14</time>
+      </span>
 
   
 </div>
@@ -415,10 +513,16 @@ re<span class="token punctuation">.</span>search<span class="token punctuation">
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-07-13 11:54:49 / Modified: 16:08:23" itemprop="dateCreated datePublished" datetime="2021-07-13T11:54:49+00:00">2021-07-13</time>
+      <time title="Created: 2021-07-13 11:54:49" itemprop="dateCreated datePublished" datetime="2021-07-13T11:54:49+00:00">2021-07-13</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-07-14 23:30:06" itemprop="dateModified" datetime="2021-07-14T23:30:06+00:00">2021-07-14</time>
+      </span>
 
   
 </div>
@@ -489,7 +593,7 @@ re<span class="token punctuation">.</span>search<span class="token punctuation">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-13 16:08:23" itemprop="dateModified" datetime="2021-07-13T16:08:23+00:00">2021-07-13</time>
+        <time title="Modified: 2021-07-14 23:30:06" itemprop="dateModified" datetime="2021-07-14T23:30:06+00:00">2021-07-14</time>
       </span>
 
   
@@ -725,7 +829,7 @@ re<span class="token punctuation">.</span>search<span class="token punctuation">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-13 16:08:23" itemprop="dateModified" datetime="2021-07-13T16:08:23+00:00">2021-07-13</time>
+        <time title="Modified: 2021-07-14 23:30:06" itemprop="dateModified" datetime="2021-07-14T23:30:06+00:00">2021-07-14</time>
       </span>
 
   
@@ -802,7 +906,7 @@ re<span class="token punctuation">.</span>search<span class="token punctuation">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-13 16:08:23" itemprop="dateModified" datetime="2021-07-13T16:08:23+00:00">2021-07-13</time>
+        <time title="Modified: 2021-07-14 23:30:06" itemprop="dateModified" datetime="2021-07-14T23:30:06+00:00">2021-07-14</time>
       </span>
 
   
@@ -884,7 +988,7 @@ re<span class="token punctuation">.</span>search<span class="token punctuation">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-13 16:08:23" itemprop="dateModified" datetime="2021-07-13T16:08:23+00:00">2021-07-13</time>
+        <time title="Modified: 2021-07-14 23:30:06" itemprop="dateModified" datetime="2021-07-14T23:30:06+00:00">2021-07-14</time>
       </span>
 
   
@@ -969,7 +1073,7 @@ re<span class="token punctuation">.</span>search<span class="token punctuation">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-13 16:08:23" itemprop="dateModified" datetime="2021-07-13T16:08:23+00:00">2021-07-13</time>
+        <time title="Modified: 2021-07-14 23:30:06" itemprop="dateModified" datetime="2021-07-14T23:30:06+00:00">2021-07-14</time>
       </span>
 
   
@@ -997,81 +1101,6 @@ d <span class="token operator">=</span> defaultdict<span class="token punctuatio
 <pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> collections <span class="token keyword">import</span> defaultdict
 
 d <span class="token operator">=</span> defaultdict<span class="token punctuation">(</span><span class="token keyword">lambda</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">)</span></code></pre>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/07/04/pandas-clip/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/kaerunote/images/avatar.gif">
-      <meta itemprop="name" content="z6wdc">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="kaerunote">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/kaerunote/2021/07/04/pandas-clip/" class="post-title-link" itemprop="url">pandas clip</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-07-04 15:23:42" itemprop="dateCreated datePublished" datetime="2021-07-04T15:23:42+00:00">2021-07-04</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-13 16:08:23" itemprop="dateModified" datetime="2021-07-13T16:08:23+00:00">2021-07-13</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.clip.html">clip()</a></p>
-<p><code>clip()</code> 可以對資料重新設定上下界</p>
-<p>超過上下界的值</p>
-<p>就會各自被設定成上下界的值</p>
-<pre class="language-python" data-language="python"><code class="language-python">df<span class="token punctuation">.</span>clip<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span></code></pre>
 
       
     </div>
