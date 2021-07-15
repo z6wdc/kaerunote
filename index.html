@@ -124,7 +124,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/kaerunote/archives">
-          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-count">28</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -170,6 +170,104 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/07/16/Python-Decorators/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/kaerunote/images/avatar.gif">
+      <meta itemprop="name" content="z6wdc">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kaerunote">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/kaerunote/2021/07/16/Python-Decorators/" class="post-title-link" itemprop="url">Python Decorators</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-07-16 08:19:13" itemprop="dateCreated datePublished" datetime="2021-07-16T08:19:13+00:00">2021-07-16</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-07-15 23:34:17" itemprop="dateModified" datetime="2021-07-15T23:34:17+00:00">2021-07-15</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a target="_blank" rel="noopener" href="https://www.python.org/dev/peps/pep-0318/#examples">Decorators</a></p>
+<p>可以用來修飾 <code>class</code> 跟 <code>function</code></p>
+<p><code>function</code> 的範例如下</p>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">decorator_sample</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">inner1</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+          
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"before Execution"</span><span class="token punctuation">)</span>          
+        returned_value <span class="token operator">=</span> func<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"after Execution"</span><span class="token punctuation">)</span>
+          
+        <span class="token keyword">return</span> returned_value
+          
+    <span class="token keyword">return</span> inner1
+    
+<span class="token decorator annotation punctuation">@decorator_sample</span>
+<span class="token keyword">def</span> <span class="token function">sum_two_numbers</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Inside the function"</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> a <span class="token operator">+</span> b
+  
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Sum ="</span><span class="token punctuation">,</span> sum_two_numbers<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+<span class="token triple-quoted-string string">"""
+before Execution
+Inside the function
+after Execution
+Sum = 3
+"""</span></code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/07/15/git-config-core-ignorecase/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -193,16 +291,10 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2021-07-15 08:36:22" itemprop="dateCreated datePublished" datetime="2021-07-15T08:36:22+00:00">2021-07-15</time>
+      <time title="Created: 2021-07-15 08:36:22 / Modified: 23:34:17" itemprop="dateCreated datePublished" datetime="2021-07-15T08:36:22+00:00">2021-07-15</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-14 23:45:02" itemprop="dateModified" datetime="2021-07-14T23:45:02+00:00">2021-07-14</time>
-      </span>
 
   
 </div>
@@ -275,16 +367,10 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2021-07-15 08:19:03" itemprop="dateCreated datePublished" datetime="2021-07-15T08:19:03+00:00">2021-07-15</time>
+      <time title="Created: 2021-07-15 08:19:03 / Modified: 23:34:17" itemprop="dateCreated datePublished" datetime="2021-07-15T08:19:03+00:00">2021-07-15</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-14 23:45:02" itemprop="dateModified" datetime="2021-07-14T23:45:02+00:00">2021-07-14</time>
-      </span>
 
   
 </div>
@@ -367,10 +453,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-07-14 01:00:37 / Modified: 23:45:02" itemprop="dateCreated datePublished" datetime="2021-07-14T01:00:37+00:00">2021-07-14</time>
+      <time title="Created: 2021-07-14 01:00:37" itemprop="dateCreated datePublished" datetime="2021-07-14T01:00:37+00:00">2021-07-14</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-07-15 23:34:17" itemprop="dateModified" datetime="2021-07-15T23:34:17+00:00">2021-07-15</time>
+      </span>
 
   
 </div>
@@ -447,7 +539,7 @@ re<span class="token punctuation">.</span>search<span class="token punctuation">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-14 23:45:02" itemprop="dateModified" datetime="2021-07-14T23:45:02+00:00">2021-07-14</time>
+        <time title="Modified: 2021-07-15 23:34:17" itemprop="dateModified" datetime="2021-07-15T23:34:17+00:00">2021-07-15</time>
       </span>
 
   
@@ -521,7 +613,7 @@ re<span class="token punctuation">.</span>search<span class="token punctuation">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-14 23:45:02" itemprop="dateModified" datetime="2021-07-14T23:45:02+00:00">2021-07-14</time>
+        <time title="Modified: 2021-07-15 23:34:17" itemprop="dateModified" datetime="2021-07-15T23:34:17+00:00">2021-07-15</time>
       </span>
 
   
@@ -603,7 +695,7 @@ re<span class="token punctuation">.</span>search<span class="token punctuation">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-14 23:45:02" itemprop="dateModified" datetime="2021-07-14T23:45:02+00:00">2021-07-14</time>
+        <time title="Modified: 2021-07-15 23:34:17" itemprop="dateModified" datetime="2021-07-15T23:34:17+00:00">2021-07-15</time>
       </span>
 
   
@@ -675,7 +767,7 @@ re<span class="token punctuation">.</span>search<span class="token punctuation">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-14 23:45:02" itemprop="dateModified" datetime="2021-07-14T23:45:02+00:00">2021-07-14</time>
+        <time title="Modified: 2021-07-15 23:34:17" itemprop="dateModified" datetime="2021-07-15T23:34:17+00:00">2021-07-15</time>
       </span>
 
   
@@ -911,7 +1003,7 @@ re<span class="token punctuation">.</span>search<span class="token punctuation">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-14 23:45:02" itemprop="dateModified" datetime="2021-07-14T23:45:02+00:00">2021-07-14</time>
+        <time title="Modified: 2021-07-15 23:34:17" itemprop="dateModified" datetime="2021-07-15T23:34:17+00:00">2021-07-15</time>
       </span>
 
   
@@ -988,7 +1080,7 @@ re<span class="token punctuation">.</span>search<span class="token punctuation">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-14 23:45:02" itemprop="dateModified" datetime="2021-07-14T23:45:02+00:00">2021-07-14</time>
+        <time title="Modified: 2021-07-15 23:34:17" itemprop="dateModified" datetime="2021-07-15T23:34:17+00:00">2021-07-15</time>
       </span>
 
   
@@ -1013,91 +1105,6 @@ re<span class="token punctuation">.</span>search<span class="token punctuation">
 <p>另外如果 <code>count</code> 設定一個超過目標次數的數值</p>
 <p>也不會出現錯誤</p>
 <pre class="language-python" data-language="python"><code class="language-python"><span class="token string">'target'</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'t'</span><span class="token punctuation">,</span> <span class="token string">'T'</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span></code></pre>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/07/06/BigQuery-SELECT-EXCEPT/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/kaerunote/images/avatar.gif">
-      <meta itemprop="name" content="z6wdc">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="kaerunote">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/kaerunote/2021/07/06/BigQuery-SELECT-EXCEPT/" class="post-title-link" itemprop="url">BigQuery SELECT * EXCEPT</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-07-06 10:48:47" itemprop="dateCreated datePublished" datetime="2021-07-06T10:48:47+00:00">2021-07-06</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-14 23:45:02" itemprop="dateModified" datetime="2021-07-14T23:45:02+00:00">2021-07-14</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax#select_except">SELECT * EXCEPT</a></p>
-<p><code>SELECT * EXCEPT</code> 可以在 select 全部的時候</p>
-<p>指定要除去哪一個特定的 column</p>
-<pre class="language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">WITH</span> orders <span class="token keyword">AS</span>
-  <span class="token punctuation">(</span><span class="token keyword">SELECT</span> <span class="token number">5</span> <span class="token keyword">as</span> order_id<span class="token punctuation">,</span>
-  <span class="token string">"sprocket"</span> <span class="token keyword">as</span> item_name<span class="token punctuation">,</span>
-  <span class="token number">200</span> <span class="token keyword">as</span> quantity<span class="token punctuation">)</span>
-<span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">EXCEPT</span> <span class="token punctuation">(</span>order_id<span class="token punctuation">)</span>
-<span class="token keyword">FROM</span> orders<span class="token punctuation">;</span>
-
-<span class="token operator">+</span><span class="token comment">-----------+----------+</span>
-<span class="token operator">|</span> item_name <span class="token operator">|</span> quantity <span class="token operator">|</span>
-<span class="token operator">+</span><span class="token comment">-----------+----------+</span>
-<span class="token operator">|</span> sprocket  <span class="token operator">|</span> <span class="token number">200</span>      <span class="token operator">|</span>
-<span class="token operator">+</span><span class="token comment">-----------+----------+</span></code></pre>
 
       
     </div>
