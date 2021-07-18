@@ -22,21 +22,21 @@
 <script class="next-config" data-name="main" type="application/json">{"hostname":"z6wdc.github.io","root":"/kaerunote/","images":"/kaerunote/images","scheme":"Mist","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/kaerunote/js/config.js"></script>
 <meta property="og:type" content="website">
 <meta property="og:title" content="kaerunote">
-<meta property="og:url" content="https://z6wdc.github.io/kaerunote/tags/git/index.html">
+<meta property="og:url" content="https://z6wdc.github.io/kaerunote/page/4/index.html">
 <meta property="og:site_name" content="kaerunote">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="z6wdc">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://z6wdc.github.io/kaerunote/tags/git/">
+<link rel="canonical" href="https://z6wdc.github.io/kaerunote/page/4/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":"","permalink":"","path":"tags/git/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"page/4/index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Tag: git | kaerunote</title>
+<title>kaerunote</title>
   
 
 
@@ -160,70 +160,97 @@
 </noscript>
 
 
-    <div class="main-inner tag posts-collapse">
+    <div class="main-inner index posts-expand">
+
+    
 
 
+<div class="post-block">
   
   
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h2 class="collection-header">git
-          <small>Tag</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/05/05/BigQuery-SELECT-list-expression-references-column-x-which-is-neither-grouped-nor-aggregated-at-position/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/kaerunote/images/avatar.gif">
+      <meta itemprop="name" content="z6wdc">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kaerunote">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/kaerunote/2021/05/05/BigQuery-SELECT-list-expression-references-column-x-which-is-neither-grouped-nor-aggregated-at-position/" class="post-title-link" itemprop="url">BigQuery SELECT list expression references column x which is neither grouped nor aggregated at [position]</a>
         </h2>
-      </div>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-05-05 19:05:52" itemprop="dateCreated datePublished" datetime="2021-05-05T19:05:52+00:00">2021-05-05</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-07-18 00:47:17" itemprop="dateModified" datetime="2021-07-18T00:47:17+00:00">2021-07-18</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>當我們使用 <code>GROUP BY</code> 的時候<br>就有機會看到這 error message<br>SELECT list expression references column x which is neither grouped nor aggregated at [position]</p>
+<p>原因之一是 <code>SELECT</code> 到沒有 <code>GROUP BY</code> 的 column</p>
+<h3 id="normal-case"><a href="#normal-case" class="headerlink" title="normal case"></a>normal case</h3><pre class="language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> product_id<span class="token punctuation">,</span> <span class="token function">SUM</span><span class="token punctuation">(</span>quantity<span class="token punctuation">)</span>
+<span class="token keyword">FROM</span> pruduct
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span> product_id</code></pre>
+
+<h3 id="error-case-1"><a href="#error-case-1" class="headerlink" title="error case 1"></a>error case 1</h3><pre class="language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> product_id<span class="token punctuation">,</span> is_sale<span class="token punctuation">,</span> <span class="token function">SUM</span><span class="token punctuation">(</span>quantity<span class="token punctuation">)</span>
+<span class="token keyword">FROM</span> pruduct
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span> product_id</code></pre>
+
+<p>error case 1 中<br><code>SELECT</code> 了 <code>is_sale</code> 這個 column<br>但並沒有對 <code>is_sale</code> 做 <code>GROUP BY</code><br>就會顯示 error message<br>SELECT list expression references column <code>is_sale</code> which is neither grouped nor  aggregated at [position]</p>
+<h3 id="error-case-2"><a href="#error-case-2" class="headerlink" title="error case 2"></a>error case 2</h3><pre class="language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> product_id<span class="token punctuation">,</span> quantity
+<span class="token keyword">FROM</span> pruduct
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span> product_id</code></pre>
+
+<p>error case 2 中<br>雖然是忘記對 <code>quantity</code> 使用 <code>SUM</code><br>但 error message 一樣只會顯示<br>沒有對 <code>quantity</code> 做 <code>GROUP BY</code><br>SELECT list expression references column <code>quantity</code> which is neither grouped nor  aggregated at [position]</p>
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-07-18T09:18:02+00:00"
-              content="2021-07-18">
-          07-18
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/kaerunote/2021/07/18/git-remote/" itemprop="url">
-            <span itemprop="name">git remote</span>
-          </a>
-      </div>
-
+    <footer class="post-footer">
+        <div class="post-eof"></div>
       
-    </header>
+    </footer>
   </article>
+</div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-07-15T08:36:22+00:00"
-              content="2021-07-15">
-          07-15
-        </time>
-      </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/kaerunote/2021/07/15/git-config-core-ignorecase/" itemprop="url">
-            <span itemprop="name">git config core.ignorecase</span>
-          </a>
-      </div>
 
-      
-    </header>
-  </article>
 
-    </div>
-  </div>
-  
-  
-  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/kaerunote/page/3/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/kaerunote/">1</a><span class="space">&hellip;</span><a class="page-number" href="/kaerunote/page/3/">3</a><span class="page-number current">4</span>
+  </nav>
 
 </div>
   </main>
