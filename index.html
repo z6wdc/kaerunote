@@ -124,7 +124,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/kaerunote/archives">
-          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -170,6 +170,79 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/07/18/pandas-cut/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/kaerunote/images/avatar.gif">
+      <meta itemprop="name" content="z6wdc">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kaerunote">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/kaerunote/2021/07/18/pandas-cut/" class="post-title-link" itemprop="url">pandas cut</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-07-18 08:40:47 / Modified: 00:15:00" itemprop="dateCreated datePublished" datetime="2021-07-18T08:40:47+00:00">2021-07-18</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a target="_blank" rel="noopener" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.cut.html">cut</a></p>
+<p>把資料分成 n 組區間</p>
+<p>n 用 <code>bins</code> 來指定</p>
+<pre class="language-python" data-language="python"><code class="language-python">pd<span class="token punctuation">.</span>cut<span class="token punctuation">(</span>age_data<span class="token punctuation">[</span><span class="token string">'YEARS_BIRTH'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> bins<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span></code></pre>
+
+<p>也可以自己指定區間的上下界</p>
+<pre class="language-python" data-language="python"><code class="language-python">cut_rule <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">-</span>np<span class="token punctuation">.</span>inf<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>inf<span class="token punctuation">]</span>
+
+app_train<span class="token punctuation">[</span><span class="token string">'CNT_CHILDREN_GROUP'</span><span class="token punctuation">]</span> <span class="token operator">=</span> pd<span class="token punctuation">.</span>cut<span class="token punctuation">(</span>app_train<span class="token punctuation">[</span><span class="token string">'CNT_CHILDREN'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>values<span class="token punctuation">,</span> cut_rule<span class="token punctuation">)</span></code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/07/16/Python-Decorators/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -201,7 +274,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-15 23:34:17" itemprop="dateModified" datetime="2021-07-15T23:34:17+00:00">2021-07-15</time>
+        <time title="Modified: 2021-07-18 00:15:00" itemprop="dateModified" datetime="2021-07-18T00:15:00+00:00">2021-07-18</time>
       </span>
 
   
@@ -291,10 +364,16 @@ Sum = 3
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-07-15 08:36:22 / Modified: 23:34:17" itemprop="dateCreated datePublished" datetime="2021-07-15T08:36:22+00:00">2021-07-15</time>
+      <time title="Created: 2021-07-15 08:36:22" itemprop="dateCreated datePublished" datetime="2021-07-15T08:36:22+00:00">2021-07-15</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-07-18 00:15:00" itemprop="dateModified" datetime="2021-07-18T00:15:00+00:00">2021-07-18</time>
+      </span>
 
   
 </div>
@@ -367,10 +446,16 @@ Sum = 3
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-07-15 08:19:03 / Modified: 23:34:17" itemprop="dateCreated datePublished" datetime="2021-07-15T08:19:03+00:00">2021-07-15</time>
+      <time title="Created: 2021-07-15 08:19:03" itemprop="dateCreated datePublished" datetime="2021-07-15T08:19:03+00:00">2021-07-15</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-07-18 00:15:00" itemprop="dateModified" datetime="2021-07-18T00:15:00+00:00">2021-07-18</time>
+      </span>
 
   
 </div>
@@ -461,7 +546,7 @@ Sum = 3
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-15 23:34:17" itemprop="dateModified" datetime="2021-07-15T23:34:17+00:00">2021-07-15</time>
+        <time title="Modified: 2021-07-18 00:15:00" itemprop="dateModified" datetime="2021-07-18T00:15:00+00:00">2021-07-18</time>
       </span>
 
   
@@ -539,7 +624,7 @@ re<span class="token punctuation">.</span>search<span class="token punctuation">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-15 23:34:17" itemprop="dateModified" datetime="2021-07-15T23:34:17+00:00">2021-07-15</time>
+        <time title="Modified: 2021-07-18 00:15:00" itemprop="dateModified" datetime="2021-07-18T00:15:00+00:00">2021-07-18</time>
       </span>
 
   
@@ -613,7 +698,7 @@ re<span class="token punctuation">.</span>search<span class="token punctuation">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-15 23:34:17" itemprop="dateModified" datetime="2021-07-15T23:34:17+00:00">2021-07-15</time>
+        <time title="Modified: 2021-07-18 00:15:00" itemprop="dateModified" datetime="2021-07-18T00:15:00+00:00">2021-07-18</time>
       </span>
 
   
@@ -695,7 +780,7 @@ re<span class="token punctuation">.</span>search<span class="token punctuation">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-15 23:34:17" itemprop="dateModified" datetime="2021-07-15T23:34:17+00:00">2021-07-15</time>
+        <time title="Modified: 2021-07-18 00:15:00" itemprop="dateModified" datetime="2021-07-18T00:15:00+00:00">2021-07-18</time>
       </span>
 
   
@@ -767,7 +852,7 @@ re<span class="token punctuation">.</span>search<span class="token punctuation">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-15 23:34:17" itemprop="dateModified" datetime="2021-07-15T23:34:17+00:00">2021-07-15</time>
+        <time title="Modified: 2021-07-18 00:15:00" itemprop="dateModified" datetime="2021-07-18T00:15:00+00:00">2021-07-18</time>
       </span>
 
   
@@ -1003,7 +1088,7 @@ re<span class="token punctuation">.</span>search<span class="token punctuation">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-15 23:34:17" itemprop="dateModified" datetime="2021-07-15T23:34:17+00:00">2021-07-15</time>
+        <time title="Modified: 2021-07-18 00:15:00" itemprop="dateModified" datetime="2021-07-18T00:15:00+00:00">2021-07-18</time>
       </span>
 
   
@@ -1023,88 +1108,6 @@ re<span class="token punctuation">.</span>search<span class="token punctuation">
 
 <p>然後可以利用 <code>pbpaste</code> 來貼出目前複製的內容</p>
 <pre class="language-bash" data-language="bash"><code class="language-bash">pbpaste</code></pre>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/07/10/Python-str-replace/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/kaerunote/images/avatar.gif">
-      <meta itemprop="name" content="z6wdc">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="kaerunote">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/kaerunote/2021/07/10/Python-str-replace/" class="post-title-link" itemprop="url">Python str.replace</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-07-10 01:41:40" itemprop="dateCreated datePublished" datetime="2021-07-10T01:41:40+00:00">2021-07-10</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-15 23:34:17" itemprop="dateModified" datetime="2021-07-15T23:34:17+00:00">2021-07-15</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://docs.python.org/3/library/stdtypes.html#str.replace">str.replace()</a></p>
-<p>可用來對字串中的字做替換</p>
-<pre class="language-python" data-language="python"><code class="language-python"><span class="token string">'target'</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'t'</span><span class="token punctuation">,</span> <span class="token string">'T'</span><span class="token punctuation">)</span></code></pre>
-
-<p>沒有指定 <code>count</code> 的話，就會對所有字做替換</p>
-<p>有指定 <code>count</code> 的話</p>
-<pre class="language-python" data-language="python"><code class="language-python"><span class="token string">'target'</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'t'</span><span class="token punctuation">,</span> <span class="token string">'T'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span></code></pre>
-
-<p>就只會替換前面 <code>count</code> 次的字</p>
-<p>另外如果 <code>count</code> 設定一個超過目標次數的數值</p>
-<p>也不會出現錯誤</p>
-<pre class="language-python" data-language="python"><code class="language-python"><span class="token string">'target'</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'t'</span><span class="token punctuation">,</span> <span class="token string">'T'</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span></code></pre>
 
       
     </div>
