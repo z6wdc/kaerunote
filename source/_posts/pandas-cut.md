@@ -18,5 +18,5 @@ pd.cut(age_data['YEARS_BIRTH'], bins=10)
 ```python
 cut_rule = [-np.inf, 0, 2, 5, np.inf]
 
-app_train['CNT_CHILDREN_GROUP'] = pd.cut(app_train['CNT_CHILDREN'].values, cut_rule)
+app_train['CNT_CHILDREN_GROUP'] = pd.cut(app_train['CNT_CHILDREN'], cut_rule)
 ```
