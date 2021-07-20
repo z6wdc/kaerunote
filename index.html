@@ -124,14 +124,14 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/kaerunote/archives">
-          <span class="site-state-item-count">40</span>
+          <span class="site-state-item-count">42</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/kaerunote/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -170,6 +170,149 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/07/20/IPython-timeit/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/kaerunote/images/avatar.gif">
+      <meta itemprop="name" content="z6wdc">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kaerunote">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/kaerunote/2021/07/20/IPython-timeit/" class="post-title-link" itemprop="url">IPython timeit</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-07-20 21:44:24 / Modified: 12:54:18" itemprop="dateCreated datePublished" datetime="2021-07-20T21:44:24+00:00">2021-07-20</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a target="_blank" rel="noopener" href="https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-timeit">%timeit</a></p>
+<p>可以利用 <code>%timeit</code> 來看 line 的執行時間</p>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token operator">%</span>timeit college<span class="token punctuation">.</span>loc<span class="token punctuation">[</span>cn<span class="token punctuation">,</span> <span class="token string">'UGDS_WHITE'</span><span class="token punctuation">]</span></code></pre>
+
+<p>如果要看 cell 的執行時間可以利用 <code>%%timeit</code></p>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token operator">%</span><span class="token operator">%</span>timeit
+row_num <span class="token operator">=</span> college<span class="token punctuation">.</span>index<span class="token punctuation">.</span>get_loc<span class="token punctuation">(</span>cn<span class="token punctuation">)</span>
+col_num <span class="token operator">=</span> college<span class="token punctuation">.</span>columns<span class="token punctuation">.</span>get_loc<span class="token punctuation">(</span><span class="token string">'UGDS_WHITE'</span><span class="token punctuation">)</span>
+row_num<span class="token punctuation">,</span> col_num</code></pre>
+
+<p>還可以利用 <code>-r</code> 跟 <code>-n</code> 來決定 repeat 次數跟 number 大小</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/07/20/pandas-get-loc/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/kaerunote/images/avatar.gif">
+      <meta itemprop="name" content="z6wdc">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kaerunote">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/kaerunote/2021/07/20/pandas-get-loc/" class="post-title-link" itemprop="url">pandas get_loc</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-07-20 21:15:01 / Modified: 12:54:18" itemprop="dateCreated datePublished" datetime="2021-07-20T21:15:01+00:00">2021-07-20</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a target="_blank" rel="noopener" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Index.get_loc.html">get_loc</a></p>
+<p>可以取得 <code>Index</code> 的 location</p>
+<pre class="language-python" data-language="python"><code class="language-python">college<span class="token punctuation">.</span>columns<span class="token punctuation">.</span>get_loc<span class="token punctuation">(</span><span class="token string">'UGDS_WHITE'</span><span class="token punctuation">)</span>
+college<span class="token punctuation">.</span>index<span class="token punctuation">.</span>get_loc<span class="token punctuation">(</span><span class="token string">'Birmingham Southern College'</span><span class="token punctuation">)</span></code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/07/20/pandas-pivot/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -195,7 +338,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-07-20 17:08:05 / Modified: 08:10:41" itemprop="dateCreated datePublished" datetime="2021-07-20T17:08:05+00:00">2021-07-20</time>
+      <time title="Created: 2021-07-20 17:08:05 / Modified: 12:54:18" itemprop="dateCreated datePublished" datetime="2021-07-20T17:08:05+00:00">2021-07-20</time>
     </span>
 
   
@@ -266,7 +409,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-07-20 16:45:22 / Modified: 08:10:41" itemprop="dateCreated datePublished" datetime="2021-07-20T16:45:22+00:00">2021-07-20</time>
+      <time title="Created: 2021-07-20 16:45:22 / Modified: 12:54:18" itemprop="dateCreated datePublished" datetime="2021-07-20T16:45:22+00:00">2021-07-20</time>
     </span>
 
   
@@ -334,7 +477,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-07-20 16:34:59 / Modified: 08:10:41" itemprop="dateCreated datePublished" datetime="2021-07-20T16:34:59+00:00">2021-07-20</time>
+      <time title="Created: 2021-07-20 16:34:59 / Modified: 12:54:18" itemprop="dateCreated datePublished" datetime="2021-07-20T16:34:59+00:00">2021-07-20</time>
     </span>
 
   
@@ -406,7 +549,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-07-20 16:26:06 / Modified: 08:10:41" itemprop="dateCreated datePublished" datetime="2021-07-20T16:26:06+00:00">2021-07-20</time>
+      <time title="Created: 2021-07-20 16:26:06 / Modified: 12:54:18" itemprop="dateCreated datePublished" datetime="2021-07-20T16:26:06+00:00">2021-07-20</time>
     </span>
 
   
@@ -476,7 +619,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-07-20 16:20:36 / Modified: 08:10:41" itemprop="dateCreated datePublished" datetime="2021-07-20T16:20:36+00:00">2021-07-20</time>
+      <time title="Created: 2021-07-20 16:20:36 / Modified: 12:54:18" itemprop="dateCreated datePublished" datetime="2021-07-20T16:20:36+00:00">2021-07-20</time>
     </span>
 
   
@@ -544,7 +687,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-07-20 16:13:58 / Modified: 08:10:41" itemprop="dateCreated datePublished" datetime="2021-07-20T16:13:58+00:00">2021-07-20</time>
+      <time title="Created: 2021-07-20 16:13:58 / Modified: 12:54:18" itemprop="dateCreated datePublished" datetime="2021-07-20T16:13:58+00:00">2021-07-20</time>
     </span>
 
   
@@ -611,7 +754,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-07-20 16:07:08 / Modified: 08:10:41" itemprop="dateCreated datePublished" datetime="2021-07-20T16:07:08+00:00">2021-07-20</time>
+      <time title="Created: 2021-07-20 16:07:08 / Modified: 12:54:18" itemprop="dateCreated datePublished" datetime="2021-07-20T16:07:08+00:00">2021-07-20</time>
     </span>
 
   
@@ -678,7 +821,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-07-20 15:48:47 / Modified: 08:10:41" itemprop="dateCreated datePublished" datetime="2021-07-20T15:48:47+00:00">2021-07-20</time>
+      <time title="Created: 2021-07-20 15:48:47 / Modified: 12:54:18" itemprop="dateCreated datePublished" datetime="2021-07-20T15:48:47+00:00">2021-07-20</time>
     </span>
 
   
@@ -721,163 +864,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/07/19/pandas-str-contains/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/kaerunote/images/avatar.gif">
-      <meta itemprop="name" content="z6wdc">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="kaerunote">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/kaerunote/2021/07/19/pandas-str-contains/" class="post-title-link" itemprop="url">pandas str.contains</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-07-19 11:54:59" itemprop="dateCreated datePublished" datetime="2021-07-19T11:54:59+00:00">2021-07-19</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-20 08:10:41" itemprop="dateModified" datetime="2021-07-20T08:10:41+00:00">2021-07-20</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://pandas.pydata.org/docs/reference/api/pandas.Series.str.contains.html">str.contains</a></p>
-<p>檢查 <code>Series</code> 裡面有沒有包含特定字串</p>
-<pre class="language-python" data-language="python"><code class="language-python">s<span class="token punctuation">.</span><span class="token builtin">str</span><span class="token punctuation">.</span>contains<span class="token punctuation">(</span><span class="token string">'text'</span><span class="token punctuation">)</span></code></pre>
-
-<p>想要忽略大小寫的時候</p>
-<p>可以把 <code>case</code> 設定成 <code>False</code> 預設為 <code>True</code></p>
-<pre class="language-python" data-language="python"><code class="language-python">s<span class="token punctuation">.</span><span class="token builtin">str</span><span class="token punctuation">.</span>contains<span class="token punctuation">(</span><span class="token string">'og'</span><span class="token punctuation">,</span> case<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span></code></pre>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/07/18/pandas-options/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/kaerunote/images/avatar.gif">
-      <meta itemprop="name" content="z6wdc">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="kaerunote">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/kaerunote/2021/07/18/pandas-options/" class="post-title-link" itemprop="url">pandas options</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-07-18 09:36:07" itemprop="dateCreated datePublished" datetime="2021-07-18T09:36:07+00:00">2021-07-18</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-20 08:10:41" itemprop="dateModified" datetime="2021-07-20T08:10:41+00:00">2021-07-20</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/options.html">options</a></p>
-<p><code>pandas</code> 的 <code>DataFrame</code> 顯示有預設值</p>
-<p>要顯示更多時，可以用 <code>options</code> 去調整</p>
-<h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><pre class="language-python" data-language="python"><code class="language-python">pd<span class="token punctuation">.</span>options<span class="token punctuation">.</span>display<span class="token punctuation">.</span>max_columns <span class="token operator">=</span> <span class="token number">30</span>
-pd<span class="token punctuation">.</span>options<span class="token punctuation">.</span>display<span class="token punctuation">.</span>max_rows <span class="token operator">=</span> <span class="token number">100</span></code></pre>
-
-<h2 id="get"><a href="#get" class="headerlink" title="get"></a>get</h2><pre class="language-python" data-language="python"><code class="language-python">pd<span class="token punctuation">.</span>options<span class="token punctuation">.</span>display<span class="token punctuation">.</span>max_columns
-pd<span class="token punctuation">.</span>options<span class="token punctuation">.</span>display<span class="token punctuation">.</span>max_rows</code></pre>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/kaerunote/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/kaerunote/page/4/">4</a><a class="extend next" rel="next" href="/kaerunote/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/kaerunote/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/kaerunote/page/5/">5</a><a class="extend next" rel="next" href="/kaerunote/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

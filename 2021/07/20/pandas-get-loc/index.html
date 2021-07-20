@@ -20,28 +20,28 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"z6wdc.github.io","root":"/kaerunote/","images":"/kaerunote/images","scheme":"Mist","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/kaerunote/js/config.js"></script>
-<meta name="description" content="clip() clip() 可以對資料重新設定上下界 超過上下界的值 就會各自被設定成上下界的值 df.clip(-4, 6)">
+<meta name="description" content="get_loc 可以取得 Index 的 location college.columns.get_loc(&#39;UGDS_WHITE&#39;) college.index.get_loc(&#39;Birmingham Southern College&#39;)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="pandas clip">
-<meta property="og:url" content="https://z6wdc.github.io/kaerunote/2021/07/04/pandas-clip/index.html">
+<meta property="og:title" content="pandas get_loc">
+<meta property="og:url" content="https://z6wdc.github.io/kaerunote/2021/07/20/pandas-get-loc/index.html">
 <meta property="og:site_name" content="kaerunote">
-<meta property="og:description" content="clip() clip() 可以對資料重新設定上下界 超過上下界的值 就會各自被設定成上下界的值 df.clip(-4, 6)">
+<meta property="og:description" content="get_loc 可以取得 Index 的 location college.columns.get_loc(&#39;UGDS_WHITE&#39;) college.index.get_loc(&#39;Birmingham Southern College&#39;)">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-07-04T15:23:42.000Z">
+<meta property="article:published_time" content="2021-07-20T21:15:01.000Z">
 <meta property="article:modified_time" content="2021-07-20T12:54:18.828Z">
 <meta property="article:author" content="z6wdc">
 <meta property="article:tag" content="pandas">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://z6wdc.github.io/kaerunote/2021/07/04/pandas-clip/">
+<link rel="canonical" href="https://z6wdc.github.io/kaerunote/2021/07/20/pandas-get-loc/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://z6wdc.github.io/kaerunote/2021/07/04/pandas-clip/","path":"2021/07/04/pandas-clip/","title":"pandas clip"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://z6wdc.github.io/kaerunote/2021/07/20/pandas-get-loc/","path":"2021/07/20/pandas-get-loc/","title":"pandas get_loc"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>pandas clip | kaerunote</title>
+<title>pandas get_loc | kaerunote</title>
   
 
 
@@ -176,7 +176,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/07/04/pandas-clip/">
+    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/07/20/pandas-get-loc/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/kaerunote/images/avatar.gif">
@@ -189,7 +189,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          pandas clip
+          pandas get_loc
         </h1>
 
         <div class="post-meta-container">
@@ -199,16 +199,10 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2021-07-04 15:23:42" itemprop="dateCreated datePublished" datetime="2021-07-04T15:23:42+00:00">2021-07-04</time>
+      <time title="Created: 2021-07-20 21:15:01 / Modified: 12:54:18" itemprop="dateCreated datePublished" datetime="2021-07-20T21:15:01+00:00">2021-07-20</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-20 12:54:18" itemprop="dateModified" datetime="2021-07-20T12:54:18+00:00">2021-07-20</time>
-      </span>
 
   
 </div>
@@ -220,11 +214,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><a target="_blank" rel="noopener" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.clip.html">clip()</a></p>
-<p><code>clip()</code> 可以對資料重新設定上下界</p>
-<p>超過上下界的值</p>
-<p>就會各自被設定成上下界的值</p>
-<pre class="language-python" data-language="python"><code class="language-python">df<span class="token punctuation">.</span>clip<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span></code></pre>
+        <p><a target="_blank" rel="noopener" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Index.get_loc.html">get_loc</a></p>
+<p>可以取得 <code>Index</code> 的 location</p>
+<pre class="language-python" data-language="python"><code class="language-python">college<span class="token punctuation">.</span>columns<span class="token punctuation">.</span>get_loc<span class="token punctuation">(</span><span class="token string">'UGDS_WHITE'</span><span class="token punctuation">)</span>
+college<span class="token punctuation">.</span>index<span class="token punctuation">.</span>get_loc<span class="token punctuation">(</span><span class="token string">'Birmingham Southern College'</span><span class="token punctuation">)</span></code></pre>
 
     </div>
 
@@ -241,13 +234,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/kaerunote/2021/07/01/pandas-isnull/" rel="prev" title="pandas isnull">
-                  <i class="fa fa-chevron-left"></i> pandas isnull
+                <a href="/kaerunote/2021/07/20/pandas-pivot/" rel="prev" title="pandas pivot">
+                  <i class="fa fa-chevron-left"></i> pandas pivot
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/kaerunote/2021/07/06/Python-collections-defaultdict/" rel="next" title="Python collections defaultdict">
-                  Python collections defaultdict <i class="fa fa-chevron-right"></i>
+                <a href="/kaerunote/2021/07/20/IPython-timeit/" rel="next" title="IPython timeit">
+                  IPython timeit <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
