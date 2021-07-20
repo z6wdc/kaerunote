@@ -20,28 +20,28 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"z6wdc.github.io","root":"/kaerunote/","images":"/kaerunote/images","scheme":"Mist","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/kaerunote/js/config.js"></script>
-<meta name="description" content="value_counts 用來計數 Series 裡面值出現的次數 s.value_counts()  normalizenormalize 設成 True 就會回傳值出現次數佔的比例 s.value_counts(normalize&#x3D;True)  dropnadropna 設成 False 就會回傳 NaN 出現的次數 s.value_counts(dropna&#x3D;False)  sortvalu">
+<meta name="description" content="str.contains 檢查 Series 裡面有沒有包含特定字串 s.str.contains(&#39;text&#39;)  想要忽略大小寫的時候 可以把 case 設定成 False 預設為 True s.str.contains(&#39;og&#39;, case&#x3D;False)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="pandas value_counts">
-<meta property="og:url" content="https://z6wdc.github.io/kaerunote/2021/06/25/pandas-value-counts/index.html">
+<meta property="og:title" content="pandas str.contains">
+<meta property="og:url" content="https://z6wdc.github.io/kaerunote/2021/07/19/pandas-str-contains/index.html">
 <meta property="og:site_name" content="kaerunote">
-<meta property="og:description" content="value_counts 用來計數 Series 裡面值出現的次數 s.value_counts()  normalizenormalize 設成 True 就會回傳值出現次數佔的比例 s.value_counts(normalize&#x3D;True)  dropnadropna 設成 False 就會回傳 NaN 出現的次數 s.value_counts(dropna&#x3D;False)  sortvalu">
+<meta property="og:description" content="str.contains 檢查 Series 裡面有沒有包含特定字串 s.str.contains(&#39;text&#39;)  想要忽略大小寫的時候 可以把 case 設定成 False 預設為 True s.str.contains(&#39;og&#39;, case&#x3D;False)">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-06-25T00:39:13.000Z">
+<meta property="article:published_time" content="2021-07-19T11:54:59.000Z">
 <meta property="article:modified_time" content="2021-07-20T06:46:26.213Z">
 <meta property="article:author" content="z6wdc">
 <meta property="article:tag" content="pandas">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://z6wdc.github.io/kaerunote/2021/06/25/pandas-value-counts/">
+<link rel="canonical" href="https://z6wdc.github.io/kaerunote/2021/07/19/pandas-str-contains/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://z6wdc.github.io/kaerunote/2021/06/25/pandas-value-counts/","path":"2021/06/25/pandas-value-counts/","title":"pandas value_counts"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://z6wdc.github.io/kaerunote/2021/07/19/pandas-str-contains/","path":"2021/07/19/pandas-str-contains/","title":"pandas str.contains"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>pandas value_counts | kaerunote</title>
+<title>pandas str.contains | kaerunote</title>
   
 
 
@@ -103,7 +103,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -116,7 +116,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#normalize"><span class="nav-number">1.</span> <span class="nav-text">normalize</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dropna"><span class="nav-number">2.</span> <span class="nav-text">dropna</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sort"><span class="nav-number">3.</span> <span class="nav-text">sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ascending"><span class="nav-number">4.</span> <span class="nav-text">ascending</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -177,7 +176,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/06/25/pandas-value-counts/">
+    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/07/19/pandas-str-contains/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/kaerunote/images/avatar.gif">
@@ -190,7 +189,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          pandas value_counts
+          pandas str.contains
         </h1>
 
         <div class="post-meta-container">
@@ -201,7 +200,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2021-06-25 00:39:13" itemprop="dateCreated datePublished" datetime="2021-06-25T00:39:13+00:00">2021-06-25</time>
+      <time title="Created: 2021-07-19 11:54:59" itemprop="dateCreated datePublished" datetime="2021-07-19T11:54:59+00:00">2021-07-19</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
@@ -221,24 +220,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><a target="_blank" rel="noopener" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.value_counts.html">value_counts</a></p>
-<p>用來計數 <code>Series</code> 裡面值出現的次數</p>
-<pre class="language-python" data-language="python"><code class="language-python">s<span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+        <p><a target="_blank" rel="noopener" href="https://pandas.pydata.org/docs/reference/api/pandas.Series.str.contains.html">str.contains</a></p>
+<p>檢查 <code>Series</code> 裡面有沒有包含特定字串</p>
+<pre class="language-python" data-language="python"><code class="language-python">s<span class="token punctuation">.</span><span class="token builtin">str</span><span class="token punctuation">.</span>contains<span class="token punctuation">(</span><span class="token string">'text'</span><span class="token punctuation">)</span></code></pre>
 
-<h2 id="normalize"><a href="#normalize" class="headerlink" title="normalize"></a>normalize</h2><p><code>normalize</code> 設成 True 就會回傳值出現次數佔的比例</p>
-<pre class="language-python" data-language="python"><code class="language-python">s<span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span>normalize<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span></code></pre>
-
-<h2 id="dropna"><a href="#dropna" class="headerlink" title="dropna"></a>dropna</h2><p><code>dropna</code> 設成 False 就會回傳 <code>NaN</code> 出現的次數</p>
-<pre class="language-python" data-language="python"><code class="language-python">s<span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span>dropna<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span></code></pre>
-
-<h2 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h2><p><code>value_counts</code> 預設會對出現的次數做排序</p>
-<p>可以利用 <code>sort</code> 設定成不要排序</p>
-<pre class="language-python" data-language="python"><code class="language-python">s<span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span>sort<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span></code></pre>
-
-<h2 id="ascending"><a href="#ascending" class="headerlink" title="ascending"></a>ascending</h2><p><code>value_counts</code> 預設會對出現的次數做排序</p>
-<p>而排序的方式是預設從大排到小</p>
-<p>如果想反過來可以設定 <code>ascending</code> 為 <code>True</code></p>
-<pre class="language-python" data-language="python"><code class="language-python">s<span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span>ascending<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span></code></pre>
+<p>想要忽略大小寫的時候</p>
+<p>可以把 <code>case</code> 設定成 <code>False</code> 預設為 <code>True</code></p>
+<pre class="language-python" data-language="python"><code class="language-python">s<span class="token punctuation">.</span><span class="token builtin">str</span><span class="token punctuation">.</span>contains<span class="token punctuation">(</span><span class="token string">'og'</span><span class="token punctuation">,</span> case<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span></code></pre>
 
     </div>
 
@@ -255,14 +243,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/kaerunote/2021/06/24/pandas-shape/" rel="prev" title="pandas shape">
-                  <i class="fa fa-chevron-left"></i> pandas shape
+                <a href="/kaerunote/2021/07/18/pandas-options/" rel="prev" title="pandas options">
+                  <i class="fa fa-chevron-left"></i> pandas options
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/kaerunote/2021/06/25/Python-docstring/" rel="next" title="Python docstring">
-                  Python docstring <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>

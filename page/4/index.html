@@ -124,7 +124,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/kaerunote/archives">
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -170,6 +170,84 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/05/06/Python-List-Comprehension/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/kaerunote/images/avatar.gif">
+      <meta itemprop="name" content="z6wdc">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kaerunote">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/kaerunote/2021/05/06/Python-List-Comprehension/" class="post-title-link" itemprop="url">Python List Comprehension</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-05-06 20:18:13" itemprop="dateCreated datePublished" datetime="2021-05-06T20:18:13+00:00">2021-05-06</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-07-20 06:46:26" itemprop="dateModified" datetime="2021-07-20T06:46:26+00:00">2021-07-20</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>在 Python 中有 <a target="_blank" rel="noopener" href="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions">List Comprehension</a> 這個簡潔的 syntax</p>
+<h2 id="The-Syntax"><a href="#The-Syntax" class="headerlink" title="The Syntax"></a>The Syntax</h2><pre class="language-python" data-language="python"><code class="language-python">newlist <span class="token operator">=</span> <span class="token punctuation">[</span>expression <span class="token keyword">for</span> item <span class="token keyword">in</span> iterable <span class="token keyword">if</span> condition <span class="token operator">==</span> <span class="token boolean">True</span><span class="token punctuation">]</span></code></pre>
+
+<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h3><p>列出從 1 - 10 的偶數</p>
+<pre class="language-python" data-language="python"><code class="language-python">numbers <span class="token operator">=</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+even <span class="token operator">=</span> <span class="token punctuation">[</span>x <span class="token keyword">for</span> x <span class="token keyword">in</span> numbers <span class="token keyword">if</span> x <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">]</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>even<span class="token punctuation">)</span></code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/05/05/BigQuery-SELECT-list-expression-references-column-x-which-is-neither-grouped-nor-aggregated-at-position/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -201,7 +279,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-18 00:47:17" itemprop="dateModified" datetime="2021-07-18T00:47:17+00:00">2021-07-18</time>
+        <time title="Modified: 2021-07-20 06:46:26" itemprop="dateModified" datetime="2021-07-20T06:46:26+00:00">2021-07-20</time>
       </span>
 
   

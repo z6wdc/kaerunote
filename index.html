@@ -124,7 +124,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/kaerunote/archives">
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -170,6 +170,83 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/07/19/pandas-str-contains/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/kaerunote/images/avatar.gif">
+      <meta itemprop="name" content="z6wdc">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kaerunote">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/kaerunote/2021/07/19/pandas-str-contains/" class="post-title-link" itemprop="url">pandas str.contains</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-07-19 11:54:59" itemprop="dateCreated datePublished" datetime="2021-07-19T11:54:59+00:00">2021-07-19</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-07-20 06:46:26" itemprop="dateModified" datetime="2021-07-20T06:46:26+00:00">2021-07-20</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a target="_blank" rel="noopener" href="https://pandas.pydata.org/docs/reference/api/pandas.Series.str.contains.html">str.contains</a></p>
+<p>檢查 <code>Series</code> 裡面有沒有包含特定字串</p>
+<pre class="language-python" data-language="python"><code class="language-python">s<span class="token punctuation">.</span><span class="token builtin">str</span><span class="token punctuation">.</span>contains<span class="token punctuation">(</span><span class="token string">'text'</span><span class="token punctuation">)</span></code></pre>
+
+<p>想要忽略大小寫的時候</p>
+<p>可以把 <code>case</code> 設定成 <code>False</code> 預設為 <code>True</code></p>
+<pre class="language-python" data-language="python"><code class="language-python">s<span class="token punctuation">.</span><span class="token builtin">str</span><span class="token punctuation">.</span>contains<span class="token punctuation">(</span><span class="token string">'og'</span><span class="token punctuation">,</span> case<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span></code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/07/18/pandas-options/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -193,10 +270,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-07-18 09:36:07 / Modified: 00:47:17" itemprop="dateCreated datePublished" datetime="2021-07-18T09:36:07+00:00">2021-07-18</time>
+      <time title="Created: 2021-07-18 09:36:07" itemprop="dateCreated datePublished" datetime="2021-07-18T09:36:07+00:00">2021-07-18</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-07-20 06:46:26" itemprop="dateModified" datetime="2021-07-20T06:46:26+00:00">2021-07-20</time>
+      </span>
 
   
 </div>
@@ -265,10 +348,16 @@ pd<span class="token punctuation">.</span>options<span class="token punctuation"
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-07-18 09:18:02 / Modified: 00:47:17" itemprop="dateCreated datePublished" datetime="2021-07-18T09:18:02+00:00">2021-07-18</time>
+      <time title="Created: 2021-07-18 09:18:02" itemprop="dateCreated datePublished" datetime="2021-07-18T09:18:02+00:00">2021-07-18</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-07-20 06:46:26" itemprop="dateModified" datetime="2021-07-20T06:46:26+00:00">2021-07-20</time>
+      </span>
 
   
 </div>
@@ -339,10 +428,16 @@ pd<span class="token punctuation">.</span>options<span class="token punctuation"
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-07-18 08:40:47 / Modified: 00:47:17" itemprop="dateCreated datePublished" datetime="2021-07-18T08:40:47+00:00">2021-07-18</time>
+      <time title="Created: 2021-07-18 08:40:47" itemprop="dateCreated datePublished" datetime="2021-07-18T08:40:47+00:00">2021-07-18</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-07-20 06:46:26" itemprop="dateModified" datetime="2021-07-20T06:46:26+00:00">2021-07-20</time>
+      </span>
 
   
 </div>
@@ -362,7 +457,7 @@ pd<span class="token punctuation">.</span>options<span class="token punctuation"
 <p>也可以自己指定區間的上下界</p>
 <pre class="language-python" data-language="python"><code class="language-python">cut_rule <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">-</span>np<span class="token punctuation">.</span>inf<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>inf<span class="token punctuation">]</span>
 
-app_train<span class="token punctuation">[</span><span class="token string">'CNT_CHILDREN_GROUP'</span><span class="token punctuation">]</span> <span class="token operator">=</span> pd<span class="token punctuation">.</span>cut<span class="token punctuation">(</span>app_train<span class="token punctuation">[</span><span class="token string">'CNT_CHILDREN'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>values<span class="token punctuation">,</span> cut_rule<span class="token punctuation">)</span></code></pre>
+app_train<span class="token punctuation">[</span><span class="token string">'CNT_CHILDREN_GROUP'</span><span class="token punctuation">]</span> <span class="token operator">=</span> pd<span class="token punctuation">.</span>cut<span class="token punctuation">(</span>app_train<span class="token punctuation">[</span><span class="token string">'CNT_CHILDREN'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> cut_rule<span class="token punctuation">)</span></code></pre>
 
       
     </div>
@@ -420,7 +515,7 @@ app_train<span class="token punctuation">[</span><span class="token string">'CNT
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-18 00:47:17" itemprop="dateModified" datetime="2021-07-18T00:47:17+00:00">2021-07-18</time>
+        <time title="Modified: 2021-07-20 06:46:26" itemprop="dateModified" datetime="2021-07-20T06:46:26+00:00">2021-07-20</time>
       </span>
 
   
@@ -518,7 +613,7 @@ Sum = 3
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-18 00:47:17" itemprop="dateModified" datetime="2021-07-18T00:47:17+00:00">2021-07-18</time>
+        <time title="Modified: 2021-07-20 06:46:26" itemprop="dateModified" datetime="2021-07-20T06:46:26+00:00">2021-07-20</time>
       </span>
 
   
@@ -600,7 +695,7 @@ Sum = 3
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-18 00:47:17" itemprop="dateModified" datetime="2021-07-18T00:47:17+00:00">2021-07-18</time>
+        <time title="Modified: 2021-07-20 06:46:26" itemprop="dateModified" datetime="2021-07-20T06:46:26+00:00">2021-07-20</time>
       </span>
 
   
@@ -692,7 +787,7 @@ Sum = 3
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-18 00:47:17" itemprop="dateModified" datetime="2021-07-18T00:47:17+00:00">2021-07-18</time>
+        <time title="Modified: 2021-07-20 06:46:26" itemprop="dateModified" datetime="2021-07-20T06:46:26+00:00">2021-07-20</time>
       </span>
 
   
@@ -770,7 +865,7 @@ re<span class="token punctuation">.</span>search<span class="token punctuation">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-18 00:47:17" itemprop="dateModified" datetime="2021-07-18T00:47:17+00:00">2021-07-18</time>
+        <time title="Modified: 2021-07-20 06:46:26" itemprop="dateModified" datetime="2021-07-20T06:46:26+00:00">2021-07-20</time>
       </span>
 
   
@@ -844,7 +939,7 @@ re<span class="token punctuation">.</span>search<span class="token punctuation">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-18 00:47:17" itemprop="dateModified" datetime="2021-07-18T00:47:17+00:00">2021-07-18</time>
+        <time title="Modified: 2021-07-20 06:46:26" itemprop="dateModified" datetime="2021-07-20T06:46:26+00:00">2021-07-20</time>
       </span>
 
   
@@ -869,78 +964,6 @@ re<span class="token punctuation">.</span>search<span class="token punctuation">
 <li><p>型別</p>
 </li>
 </ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://z6wdc.github.io/kaerunote/2021/07/13/NumPy-inf/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/kaerunote/images/avatar.gif">
-      <meta itemprop="name" content="z6wdc">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="kaerunote">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/kaerunote/2021/07/13/NumPy-inf/" class="post-title-link" itemprop="url">NumPy inf</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-07-13 11:54:49" itemprop="dateCreated datePublished" datetime="2021-07-13T11:54:49+00:00">2021-07-13</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-07-18 00:47:17" itemprop="dateModified" datetime="2021-07-18T00:47:17+00:00">2021-07-18</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://numpy.org/devdocs/reference/constants.html#numpy.inf">inf</a></p>
-<p><code>NumPy</code> 中可以用 <code>numpy.inf</code> 來表示無限大</p>
 
       
     </div>

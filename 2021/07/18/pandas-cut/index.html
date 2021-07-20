@@ -20,15 +20,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"z6wdc.github.io","root":"/kaerunote/","images":"/kaerunote/images","scheme":"Mist","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/kaerunote/js/config.js"></script>
-<meta name="description" content="cut 把資料分成 n 組區間 n 用 bins 來指定 pd.cut(age_data[&#39;YEARS_BIRTH&#39;], bins&#x3D;10)  也可以自己指定區間的上下界 cut_rule &#x3D; [-np.inf, 0, 2, 5, np.inf]  app_train[&#39;CNT_CHILDREN_GROUP&#39;] &#x3D; pd.cut(app_train[&#39;CNT_CHILDREN&#39;].values, c">
+<meta name="description" content="cut 把資料分成 n 組區間 n 用 bins 來指定 pd.cut(age_data[&#39;YEARS_BIRTH&#39;], bins&#x3D;10)  也可以自己指定區間的上下界 cut_rule &#x3D; [-np.inf, 0, 2, 5, np.inf]  app_train[&#39;CNT_CHILDREN_GROUP&#39;] &#x3D; pd.cut(app_train[&#39;CNT_CHILDREN&#39;], cut_rule">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pandas cut">
 <meta property="og:url" content="https://z6wdc.github.io/kaerunote/2021/07/18/pandas-cut/index.html">
 <meta property="og:site_name" content="kaerunote">
-<meta property="og:description" content="cut 把資料分成 n 組區間 n 用 bins 來指定 pd.cut(age_data[&#39;YEARS_BIRTH&#39;], bins&#x3D;10)  也可以自己指定區間的上下界 cut_rule &#x3D; [-np.inf, 0, 2, 5, np.inf]  app_train[&#39;CNT_CHILDREN_GROUP&#39;] &#x3D; pd.cut(app_train[&#39;CNT_CHILDREN&#39;].values, c">
+<meta property="og:description" content="cut 把資料分成 n 組區間 n 用 bins 來指定 pd.cut(age_data[&#39;YEARS_BIRTH&#39;], bins&#x3D;10)  也可以自己指定區間的上下界 cut_rule &#x3D; [-np.inf, 0, 2, 5, np.inf]  app_train[&#39;CNT_CHILDREN_GROUP&#39;] &#x3D; pd.cut(app_train[&#39;CNT_CHILDREN&#39;], cut_rule">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-07-18T08:40:47.000Z">
-<meta property="article:modified_time" content="2021-07-18T00:47:17.800Z">
+<meta property="article:modified_time" content="2021-07-20T06:46:26.209Z">
 <meta property="article:author" content="z6wdc">
 <meta property="article:tag" content="pandas">
 <meta name="twitter:card" content="summary">
@@ -129,7 +129,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/kaerunote/archives">
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -199,10 +199,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-07-18 08:40:47 / Modified: 00:47:17" itemprop="dateCreated datePublished" datetime="2021-07-18T08:40:47+00:00">2021-07-18</time>
+      <time title="Created: 2021-07-18 08:40:47" itemprop="dateCreated datePublished" datetime="2021-07-18T08:40:47+00:00">2021-07-18</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-07-20 06:46:26" itemprop="dateModified" datetime="2021-07-20T06:46:26+00:00">2021-07-20</time>
+      </span>
 
   
 </div>
@@ -222,7 +228,7 @@
 <p>也可以自己指定區間的上下界</p>
 <pre class="language-python" data-language="python"><code class="language-python">cut_rule <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">-</span>np<span class="token punctuation">.</span>inf<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>inf<span class="token punctuation">]</span>
 
-app_train<span class="token punctuation">[</span><span class="token string">'CNT_CHILDREN_GROUP'</span><span class="token punctuation">]</span> <span class="token operator">=</span> pd<span class="token punctuation">.</span>cut<span class="token punctuation">(</span>app_train<span class="token punctuation">[</span><span class="token string">'CNT_CHILDREN'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>values<span class="token punctuation">,</span> cut_rule<span class="token punctuation">)</span></code></pre>
+app_train<span class="token punctuation">[</span><span class="token string">'CNT_CHILDREN_GROUP'</span><span class="token punctuation">]</span> <span class="token operator">=</span> pd<span class="token punctuation">.</span>cut<span class="token punctuation">(</span>app_train<span class="token punctuation">[</span><span class="token string">'CNT_CHILDREN'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> cut_rule<span class="token punctuation">)</span></code></pre>
 
     </div>
 
